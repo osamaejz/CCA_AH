@@ -1,0 +1,2089 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>CCA</title>
+	 {% load static %}
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.css">
+	
+	<link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/animate.min.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/fontawesome-all.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+
+	<!-- <link rel="stylesheet" type="text/css" href="assets/css/colors/switch.css"> -->
+	<!-- Color Alternatives -->
+	<!-- <link href="{% static 'assets/css/colors/color-2.css' %}" rel="alternate stylesheet" type="text/css" title="color-2">
+	<link href="{% static 'assets/css/colors/color-3.css' %}" rel="alternate stylesheet" type="text/css" title="color-3">
+	<link href="{% static 'assets/css/colors/color-4.css' %}" rel="alternate stylesheet" type="text/css" title="color-4">
+	<link href="{% static 'assets/css/colors/color-5.css' %}" rel="alternate stylesheet" type="text/css" title="color-5"> -->
+</head>
+
+<body>
+
+	<!-- This code is use for color chooser, you can delete -->
+	<!-- <div id="switch-color" class="color-switcher">
+		<div class="open"><i class="fas fa-cog"></i></div>
+		<h4>COLOR OPTION</h4>
+		<ul>
+			<li><a class="color-2" onclick="setActiveStyleSheet('color-2'); return false;" href="#"><i class="fas fa-cog"></i></a> </li>
+			<li><a class="color-3" onclick="setActiveStyleSheet('color-3'); return false;" href="#"><i class="fas fa-cog"></i></a> </li>
+			<li><a class="color-4" onclick="setActiveStyleSheet('color-4'); return false;" href="#"><i class="fas fa-cog"></i></a> </li>
+			<li><a class="color-5" onclick="setActiveStyleSheet('color-5'); return false;" href="#"><i class="fas fa-cog"></i></a> </li>
+		</ul>
+	</div> -->
+	<div class="clearfix"></div>
+
+	
+	<div class="wrapper">
+		<div class="steps-area steps-area-fixed">
+			<div class="image-holder">
+				<img src="{% static 'assets/img/side.png' %}" alt="">
+			</div>
+			<div class="steps clearfix">
+				<ul class="tablist multisteps-form__progress">
+					<li class="multisteps-form__progress-btn js-active current">
+						<span>1</span>
+					</li>
+					<li class="multisteps-form__progress-btn">
+						<span>2</span>
+					</li>
+					<li class="multisteps-form__progress-btn">
+						<span>3</span>
+					</li>
+					<li class="multisteps-form__progress-btn">
+						<span>4</span>
+					</li>
+					<li class="multisteps-form__progress-btn">
+						<span>5</span>
+					</li>
+					<li class="multisteps-form__progress-btn last">
+						<span>6</span>
+					</li>
+					
+
+				</ul>
+			</div>
+		</div>
+		<form class="multisteps-form__form" action="{% url 'useraccounts:results' %}" id="wizard" method="POST">
+		<!-- {% csrf_token %} -->
+			<div class="form-area position-relative">
+				
+				<!-- div 1 Depression --> 
+				<div class="multisteps-form__panel js-active" data-animation="slideHorz">
+					<div class="wizard-forms">
+						<div class="pb-100 clearfix">
+							<div class="form-content pera-content">
+								<div class="step-inner-content">
+									<span class="step-no bottom-line">Step 1</span>
+									<br><br>
+									
+									<div class="step-box">
+										<div class="upload-documents">
+											<!-- <h3>Upload Documents:</h3> -->
+											<div class="upload-araa bg-white">
+												
+												<!-- <div class="upload-text">
+													<span> -->
+														<div class="gender-selection">
+															<h3>I couldn’t seem to experience any positive feeling at all</h3>
+															<h3 class="urdu">میں اچھے یا مثبت جذبات محسوس نہیں کرپاتا/پاتی ہوں </h3>
+															<div class="form__group">
+																<div class="row radios">
+																  <div class="form__radio-group col-sm-12 col-sm-offset-6  col-md-offset-1 col-md-3 mr-20 text-center">
+																	Disagree<br><img src="{% static 'assets/img/dislike.png' %}" alt="happy">
+																  </div>
+																  <input type="hidden" name="startTime" id="startTime" value=""/>
+																  <br/><br/>
+																  <div class="col-md-1 pt-25 pr-65">
+																	<label for="q1_1">
+																		<input class="r" type="radio" name="d1" id="q1_1" value="1"/>
+																		<span>1</span>
+																	</label>
+																	</div>	
+																	<div class="col-md-1 pt-25 pr-65">							
+																		<label for="q1_2">
+																			<input type="radio" name="d1" id="q1_2" value="2" />
+																			<span>2</span>
+																		</label>
+																	</div>
+																		
+																	<div class="col-md-1 pt-25 pr-65">	
+																		<label for="q1_3">
+																			<input type="radio" name="d1" id="q1_3" value="3" />
+																			<span>3</span>
+																		</label>
+																	</div>
+
+																	<div class="col-md-1 pt-25 pr-65">	
+																		<label for="q1_4">
+																			<input type="radio" name="d1" id="q1_4" value="4" />
+																			<span>4</span>
+																		</label>
+																	</div>
+
+																	<div class="form__radio-group col-sm-12 col-md-3 text-center mr-20">
+																		Strongly Agree<br><img src="{% static 'assets/img/like.png' %}" alt="often">
+																	</div>
+																	<div class='d1' style="display: none;"><span class="err">This field is required.</span></div>
+															
+																</div>
+															</div>
+															
+														</div>
+													<!-- </span>
+												</div> -->
+												
+											</div>
+										</div>
+									</div>
+									<div class="step-box">
+										<div class="upload-documents">
+											<!-- <h3>Upload Documents:</h3> -->
+											<div class="upload-araa bg-white">
+												
+												<!-- <div class="upload-text">
+													<span> -->
+														<div class="gender-selection">
+															<h3>I found it difficult to work up the initiative to do things</h3>
+															<h3 class="urdu"> کوئی  کام شروع کرنے میں مشکل محسوس کرتا /کرتی ہوں </h3>
+															<div class="form__group">
+																<div class="row radios">
+																  <div class="form__radio-group col-sm-12 col-sm-offset-6  col-md-offset-1 col-md-3 mr-20 text-center">
+																	Disagree<br><img src="{% static 'assets/img/dislike.png' %}" alt="happy">
+																  </div>
+																  <br/><br/>
+																  <div class="col-md-1 pt-25 pr-65">
+																	<label for="q2_1">
+																		<input class="r" type="radio" name="d2" id="q2_1" value="1"/>
+																		<span>1</span>
+																	</label>
+																	</div>	
+																	<div class="col-md-1 pt-25 pr-65">							
+																		<label for="q2_2">
+																			<input type="radio" name="d2" id="q2_2" value="2" />
+																			<span>2</span>
+																		</label>
+																	</div>
+																		
+																	<div class="col-md-1 pt-25 pr-65">	
+																		<label for="q2_3">
+																			<input type="radio" name="d2" id="q2_3" value="3" />
+																			<span>3</span>
+																		</label>
+																	</div>
+
+																	<div class="col-md-1 pt-25 pr-65">	
+																		<label for="q2_4">
+																			<input type="radio" name="d2" id="q2_4" value="4" />
+																			<span>4</span>
+																		</label>
+																	</div>
+
+																	<div class="form__radio-group col-sm-12 col-md-3 text-center mr-20">
+																		Strongly Agree<br><img src="{% static 'assets/img/like.png' %}" alt="often">
+																	</div>
+																	<div class='d2' style="display: none;"><span class="err">This field is required.</span></div>
+															
+																</div>
+															</div>
+															
+														</div>
+													<!-- </span>
+												</div> -->
+												
+											</div>
+										</div>
+									</div>
+									<div class="step-box">	
+										<div class="upload-documents">
+											<!-- <h3>Upload Documents:</h3> -->
+											<div class="upload-araa bg-white">
+												
+												<!-- <div class="upload-text">
+													<span> -->
+														<div class="gender-selection">
+															<h3>I felt that I had nothing to look forward to</h3>
+															<h3 class="urdu"> ایسا محسوس ہوتا ہےجیسے میرے پاس توقع کرنے کے لیئے کچھ نہیں </h3>
+															<div class="form__group">
+																<div class="row radios">
+																  <div class="form__radio-group col-sm-12 col-sm-offset-6  col-md-offset-1 col-md-3 mr-20 text-center">
+																	Disagree<br><img src="{% static 'assets/img/dislike.png' %}" alt="happy">
+																  </div>
+																  <br/><br/>
+																  <div class="col-md-1 pt-25 pr-65">
+																	<label for="q3_1">
+																		<input class="r" type="radio" name="d3" id="q3_1" value="1"/>
+																		<span>1</span>
+																	</label>
+																	</div>	
+																	<div class="col-md-1 pt-25 pr-65">							
+																		<label for="q3_2">
+																			<input type="radio" name="d3" id="q3_2" value="2" />
+																			<span>2</span>
+																		</label>
+																	</div>
+																		
+																	<div class="col-md-1 pt-25 pr-65">	
+																		<label for="q3_3">
+																			<input type="radio" name="d3" id="q3_3" value="3" />
+																			<span>3</span>
+																		</label>
+																	</div>
+
+																	<div class="col-md-1 pt-25 pr-65">	
+																		<label for="q3_4">
+																			<input type="radio" name="d3" id="q3_4" value="4" />
+																			<span>4</span>
+																		</label>
+																	</div>
+
+																	<div class="form__radio-group col-sm-12 col-md-3 text-center mr-20">
+																		Strongly Agree<br><img src="{% static 'assets/img/like.png' %}" alt="often">
+																	</div>
+																	<div class='d3' style="display: none;"><span class="err">This field is required.</span></div>
+															
+																</div>
+															</div>
+															
+														</div>
+													<!-- </span>
+												</div> -->
+												
+											</div>
+										</div>
+									</div>
+									<div class="step-box">
+										<div class="upload-documents">
+											<!-- <h3>Upload Documents:</h3> -->
+											<div class="upload-araa bg-white">
+												
+												<!-- <div class="upload-text">
+													<span> -->
+														<div class="gender-selection">
+															<h3>I felt down-hearted and blue</h3>
+															<h3 class="urdu">میں مغمومیت یا مایوسی محسوس کرتا/کرتی ہوں</h3>
+															<div class="form__group">
+																<div class="row radios">
+																  <div class="form__radio-group col-sm-12 col-sm-offset-6  col-md-offset-1 col-md-3 mr-20 text-center">
+																	Disagree<br><img src="{% static 'assets/img/dislike.png' %}" alt="happy">
+																  </div>
+																  <br/><br/>
+																  <div class="col-md-1 pt-25 pr-65">
+																	<label for="q4_1">
+																		<input class="r" type="radio" name="d4" id="q4_1" value="1"/>
+																		<span>1</span>
+																	</label>
+																	</div>	
+																	<div class="col-md-1 pt-25 pr-65">							
+																		<label for="q4_2">
+																			<input type="radio" name="d4" id="q4_2" value="2" />
+																			<span>2</span>
+																		</label>
+																	</div>
+																		
+																	<div class="col-md-1 pt-25 pr-65">	
+																		<label for="q4_3">
+																			<input type="radio" name="d4" id="q4_3" value="3" />
+																			<span>3</span>
+																		</label>
+																	</div>
+
+																	<div class="col-md-1 pt-25 pr-65">	
+																		<label for="q4_4">
+																			<input type="radio" name="d4" id="q4_4" value="4" />
+																			<span>4</span>
+																		</label>
+																	</div>
+
+																	<div class="form__radio-group col-sm-12 col-md-3 text-center mr-20">
+																		Strongly Agree<br><img src="{% static 'assets/img/like.png' %}" alt="often">
+																	</div>
+																	<div class='d4' style="display: none;"><span class="err">This field is required.</span></div>
+															
+																</div>
+															</div>
+															
+														</div>
+													<!-- </span>
+												</div> -->
+												
+											</div>
+										</div>
+									</div>
+									<div class="step-box">
+										<div class="upload-documents">
+											<!-- <h3>Upload Documents:</h3> -->
+											<div class="upload-araa bg-white">
+												
+												<!-- <div class="upload-text">
+													<span> -->
+														<div class="gender-selection">
+															<h3>I was unable to become enthusiastic about anything</h3>
+															<h3 class="urdu">میں اپنے آپ کو جذبات سے عاری پاتا/پاتی ہوں </h3>
+															<div class="form__group">
+																<div class="row radios">
+																  <div class="form__radio-group col-sm-12 col-sm-offset-6  col-md-offset-1 col-md-3 mr-20 text-center">
+																	Disagree<br><img src="{% static 'assets/img/dislike.png' %}" alt="happy">
+																  </div>
+																  <br/><br/>
+																  <div class="col-md-1 pt-25 pr-65">
+																	<label for="q5_1">
+																		<input class="r" type="radio" name="d5" id="q5_1" value="1"/>
+																		<span>1</span>
+																	</label>
+																	</div>	
+																	<div class="col-md-1 pt-25 pr-65">							
+																		<label for="q5_2">
+																			<input type="radio" name="d5" id="q5_2" value="2" />
+																			<span>2</span>
+																		</label>
+																	</div>
+																		
+																	<div class="col-md-1 pt-25 pr-65">	
+																		<label for="q5_3">
+																			<input type="radio" name="d5" id="q5_3" value="3" />
+																			<span>3</span>
+																		</label>
+																	</div>
+
+																	<div class="col-md-1 pt-25 pr-65">	
+																		<label for="q5_4">
+																			<input type="radio" name="d5" id="q5_4" value="4" />
+																			<span>4</span>
+																		</label>
+																	</div>
+
+																	<div class="form__radio-group col-sm-12 col-md-3 text-center mr-20">
+																		Strongly Agree<br><img src="{% static 'assets/img/like.png' %}" alt="often">
+																	</div>
+																	<div class='d5' style="display: none;"><span class="err">This field is required.</span></div>
+															
+																</div>
+															</div>
+															
+														</div>
+													<!-- </span>
+												</div> -->
+												
+											</div>
+										</div>
+									</div>
+									<div class="step-box">
+										<div class="upload-documents">
+											<!-- <h3>Upload Documents:</h3> -->
+											<div class="upload-araa bg-white">
+												
+												<!-- <div class="upload-text">
+													<span> -->
+														<div class="gender-selection">
+															<h3>I felt I wasn’t worth much as a person</h3>
+															<h3 class="urdu">میں ایسا محسوس کرتا /کرتی ہوں کہ جیسے بحیثیتِ فرد میں کسی قابل نہیں</h3>
+															<div class="form__group">
+																<div class="row radios">
+																  <div class="form__radio-group col-sm-12 col-sm-offset-6  col-md-offset-1 col-md-3 mr-20 text-center">
+																	Disagree<br><img src="{% static 'assets/img/dislike.png' %}" alt="happy">
+																  </div>
+																  <br/><br/>
+																  <div class="col-md-1 pt-25 pr-65">
+																	<label for="q6_1">
+																		<input class="r" type="radio" name="d6" id="q6_1" value="1"/>
+																		<span>1</span>
+																	</label>
+																	</div>	
+																	<div class="col-md-1 pt-25 pr-65">							
+																		<label for="q6_2">
+																			<input type="radio" name="d6" id="q6_2" value="2" />
+																			<span>2</span>
+																		</label>
+																	</div>
+																		
+																	<div class="col-md-1 pt-25 pr-65">	
+																		<label for="q6_3">
+																			<input type="radio" name="d6" id="q6_3" value="3" />
+																			<span>3</span>
+																		</label>
+																	</div>
+
+																	<div class="col-md-1 pt-25 pr-65">	
+																		<label for="q6_4">
+																			<input type="radio" name="d6" id="q6_4" value="4" />
+																			<span>4</span>
+																		</label>
+																	</div>
+
+																	<div class="form__radio-group col-sm-12 col-md-3 text-center mr-20">
+																		Strongly Agree<br><img src="{% static 'assets/img/like.png' %}" alt="often">
+																	</div>
+																	<div class='d6' style="display: none;"><span class="err">This field is required.</span></div>
+															
+																</div>
+															</div>
+																
+														</div>
+													<!-- </span>
+												</div> -->
+												
+											</div>
+										</div>
+									</div>
+									<div class="step-box">
+										<div class="upload-documents">
+											<!-- <h3>Upload Documents:</h3> -->
+											<div class="upload-araa bg-white">
+												
+												<!-- <div class="upload-text">
+													<span> -->
+														<div class="gender-selection">
+															<h3>I felt that life was meaningless</h3>
+															<h3 class="urdu">میں زندگی کوبے معنی محسوس کرتا/کرتی ہوں</h3>
+															<div class="form__group">
+																<div class="row radios">
+																  <div class="form__radio-group col-sm-12 col-sm-offset-6  col-md-offset-1 col-md-3 mr-20 text-center">
+																	Disagree<br><img src="{% static 'assets/img/dislike.png' %}" alt="happy">
+																  </div>
+																  <br/><br/>
+																  <div class="col-md-1 pt-25 pr-65">
+																	<label for="q7_1">
+																		<input class="r" type="radio" name="d7" id="q7_1" value="1"/>
+																		<span>1</span>
+																	</label>
+																	</div>	
+																	<div class="col-md-1 pt-25 pr-65">							
+																		<label for="q7_2">
+																			<input type="radio" name="d7" id="q7_2" value="2" />
+																			<span>2</span>
+																		</label>
+																	</div>
+																		
+																	<div class="col-md-1 pt-25 pr-65">	
+																		<label for="q7_3">
+																			<input type="radio" name="d7" id="q7_3" value="3" />
+																			<span>3</span>
+																		</label>
+																	</div>
+
+																	<div class="col-md-1 pt-25 pr-65">	
+																		<label for="q7_4">
+																			<input type="radio" name="d7" id="q7_4" value="4" />
+																			<span>4</span>
+																		</label>
+																	</div>
+
+																	<div class="form__radio-group col-sm-12 col-md-3 text-center mr-20">
+																		Strongly Agree<br><img src="{% static 'assets/img/like.png' %}" alt="often">
+																	</div>
+																	<div class='d7' style="display: none;"><span class="err">This field is required.</span></div>
+															
+																</div>
+															</div>
+															
+														</div>
+													<!-- </span>
+												</div> -->
+												
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- /.inner -->
+						<div class="actions">
+							<ul>
+								<li class="disable" aria-disabled="true"><span class="js-btn-next" title="NEXT">Backward <i class="fa fa-arrow-right"></i></span></li>
+								<li ><span class="js-btn-next" title="NEXT">NEXT <i class="fa fa-arrow-right"></i></span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				
+				<!-- div 2 Activity_1_Stroop -->
+				<div class="multisteps-form__panel" data-animation="slideHorz">
+					<div class="wizard-forms">
+						<div class="inner pb-100 clearfix">
+							<div class="form-content pera-content">
+								<div class="step-inner-content">
+									<span class="step-no bottom-line">Step 2</span>
+									<div class="step-progress float-end">
+										<span>2 of 6 completed</span>
+										<div class="step-progress-bar">
+											<div class="progress">
+												<div class="progress-bar" style="width:25%"></div>
+											</div>
+										</div>
+									</div>
+									
+                                <h2>Digit Span Test</h2>
+    								<div style='font-size:20px;'><b>INSTRUCTIONS</b><br><br>This is the digit span task.<br><br>In this task, you will have to remember a sequence of numbers presented on the screen one after the other.<br>At the end of each trial, enter all the numbers into the onscreen number-pad in their correct order.<br><br><u>Example:</u> if the sequence is '7 4 5 1', enter '7 4 5 1' in this exact order.<br><br>You will now be given practice trials to help you understand the task.<br>Press 'Click to Start Test' to start the test.<br><br>
+    
+											<u class="test-click" ><a href="" 
+                              target="popup" 
+                              onclick="window.open('{% static 'working-memory-tests/digit_span_task.html' %}','popup','width=600,height=600,scrollbars=no,resizable=no'); return false;">
+                              Click to Start Test
+                            </a>	</u>
+                            </div>
+                           
+                           </div>
+							</div>
+						</div>
+						<!-- /.inner -->
+						<div class="actions">
+							<ul>
+								<li><span class="js-btn-prev" title="BACK"><i class="fa fa-arrow-left"></i> BACK </span></li>
+								<li><span class="js-btn-next" title="NEXT">NEXT <i class="fa fa-arrow-right"></i></span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- div 3 Work Stress -->
+				<div class="multisteps-form__panel" data-animation="slideHorz">
+					<div class="wizard-forms">
+						<div class="inner pb-100 clearfix">
+							<div class="form-content pera-content">
+								<div class="step-inner-content">
+									<span class="step-no bottom-line">Step 3</span>
+									<div class="step-progress float-end">
+										<span>3 of 6 completed</span>
+										<div class="step-progress-bar">
+											<div class="progress">
+												<div class="progress-bar" style="width:50%"></div>
+											</div>
+										</div>
+									</div>
+    								    <br><br>
+									<p>Thinking about your current job, how often does each of the following statements describe how you feel?</p>
+									
+										<div class="step-box">
+											<div class="upload-documents">
+												<!-- <h3>Upload Documents:</h3> -->
+												<div class="upload-araa bg-white">
+													
+													<!-- <div class="upload-text">
+														<span> -->
+															<div class="gender-selection">
+																<h3>Conditions at work are unpleasant or sometimes even unsafe</h3>
+																<h3 class="urdu">کام کی جگہ پر ناخوشگوارحالات ہوتے ہیں یا کبھی کبھی غیر محفوظ بھی ہوجاتے ہیں</h3>
+																<div class="form__group">
+																	<div class="row radios">
+																	  <div class="form__radio-group col-sm-12 col-sm-offset-6  col-md-offset-1 col-md-3 mr-20 text-center">
+																		Never<br><img src="{% static 'assets/img/never.png' %}" alt="happy">
+																	  </div>
+																	  <br/><br/>
+																	  <div class="col-md-1 pt-25">
+																		<label for="q20_1">
+																			<input class="r" type="radio" name="w1" id="q20_1" value="1"/>
+																			<span>1</span>
+																		</label>
+																		</div>	
+																		<div class="col-md-1 pt-25">							
+																			<label for="q20_2">
+																				<input type="radio" name="w1" id="q20_2" value="2" />
+																				<span>2</span>
+																			</label>
+																		</div>
+																			
+																		<div class="col-md-1 pt-25">	
+																			<label for="q20_3">
+																				<input type="radio" name="w1" id="q20_3" value="3" />
+																				<span>3</span>
+																			</label>
+																		</div>
+
+																		<div class="col-md-1 pt-25">	
+																			<label for="q20_4">
+																				<input type="radio" name="w1" id="q20_4" value="4" />
+																				<span>4</span>
+																			</label>
+																		</div>
+
+																		<div class="col-md-1 pt-25">	
+																			<label for="q20_5">
+																				<input type="radio" name="w1" id="q20_5" value="5" />
+																				<span>5</span>
+																			</label>
+																		</div>
+
+																		<div class="form__radio-group col-sm-12 col-md-3 text-center mr-20">
+																			Very Often<br><img src="{% static 'assets/img/often.png' %}" alt="often">
+																		</div>
+																		<div class='w1' style="display: none;"><span class="err">This field is required.</span></div>
+															
+																	  
+																	</div>
+																</div>
+																
+																
+															</div>
+														<!-- </span>
+													</div> -->
+													
+												</div>
+											</div>
+										</div>
+										<div class="step-box">
+											<div class="upload-documents">
+												<!-- <h3>Upload Documents:</h3> -->
+												<div class="upload-araa bg-white">
+													
+													<!-- <div class="upload-text">
+														<span> -->
+															<div class="gender-selection">
+																<h3>I feel that my job is negatively affecting my physical or emotional well being</h3>
+																<h3 class="urdu">مجھےایسا لگتا ہے کہ میرا کام میری جسمانی یا جذباتی بہبودپرمنفی طوراثرانداز ہوتا ہے</h3>
+																<div class="form__group">
+																	<div class="row radios">
+																	  <div class="form__radio-group col-sm-12 col-sm-offset-6  col-md-offset-1 col-md-3 mr-20 text-center">
+																		Never<br><img src="{% static 'assets/img/never.png' %}" alt="happy">
+																	  </div>
+																	  <br/><br/>
+																	  <div class="col-md-1 pt-25">
+																		<label for="q21_1">
+																			<input class = "r" type="radio" name="w2" id="q21_1" value="1"/>
+																			<span>1</span>
+																		</label>
+																		</div>	
+																		<div class="col-md-1 pt-25">							
+																			<label for="q21_2">
+																				<input type="radio" name="w2" id="q21_2" value="2" />
+																				<span>2</span>
+																			</label>
+																		</div>
+																			
+																		<div class="col-md-1 pt-25">	
+																			<label for="q21_3">
+																				<input type="radio" name="w2" id="q21_3" value="3" />
+																				<span>3</span>
+																			</label>
+																		</div>
+
+																		<div class="col-md-1 pt-25">	
+																			<label for="q21_4">
+																				<input type="radio" name="w2" id="q21_4" value="4" />
+																				<span>4</span>
+																			</label>
+																		</div>
+
+																		<div class="col-md-1 pt-25">	
+																			<label for="q21_5">
+																				<input type="radio" name="w2" id="q21_5" value="5" />
+																				<span>5</span>
+																			</label>
+																		</div>
+
+																		<div class="form__radio-group col-sm-12 col-md-3 text-center mr-20">
+																			Very Often<br><img src="{% static 'assets/img/often.png' %}" alt="often">
+																		</div>
+																		<div class='w2' style="display: none;"><span class="err">This field is required.</span></div>
+															
+																	  
+																	</div>
+																</div>
+																
+																
+															</div>
+														<!-- </span>
+													</div> -->
+													
+												</div>
+											</div>
+										</div>
+										<div class="step-box">
+											<div class="upload-documents">
+												<!-- <h3>Upload Documents:</h3> -->
+												<div class="upload-araa bg-white">
+													
+													<!-- <div class="upload-text">
+														<span> -->
+															<div class="gender-selection">
+																<h3>I have too much work to do and/or too many unreasonable deadlines</h3>
+																<h3 class="urdu">میرے پاس غیر معقول مقررہ وقت میں مکمل کرنے کے لیَےکافی زیادہ کام ہوتا ہے </h3>
+																<div class="form__group">
+																	<div class="row radios">
+																	  <div class="form__radio-group col-sm-12 col-sm-offset-6  col-md-offset-1 col-md-3 mr-20 text-center">
+																		Never<br><img src="{% static 'assets/img/never.png' %}" alt="happy">
+																	  </div>
+																	  <br/><br/>
+																	  <div class="col-md-1 pt-25">
+																		<label for="q22_1">
+																			<input class="r" type="radio" name="w3" id="q22_1" value="1"/>
+																			<span>1</span>
+																		</label>
+																		</div>	
+																		<div class="col-md-1 pt-25">							
+																			<label for="q22_2">
+																				<input type="radio" name="w3" id="q22_2" value="2" />
+																				<span>2</span>
+																			</label>
+																		</div>
+																			
+																		<div class="col-md-1 pt-25">	
+																			<label for="q22_3">
+																				<input type="radio" name="w3" id="q22_3" value="3" />
+																				<span>3</span>
+																			</label>
+																		</div>
+
+																		<div class="col-md-1 pt-25">	
+																			<label for="q22_4">
+																				<input type="radio" name="w3" id="q22_4" value="4" />
+																				<span>4</span>
+																			</label>
+																		</div>
+
+																		<div class="col-md-1 pt-25">	
+																			<label for="q22_5">
+																				<input type="radio" name="w3" id="q22_5" value="5" />
+																				<span>5</span>
+																			</label>
+																		</div>
+
+																		<div class="form__radio-group col-sm-12 col-md-3 text-center mr-20">
+																			Very Often<br><img src="{% static 'assets/img/often.png' %}" alt="often">
+																		</div>
+																		<div class='w3' style="display: none;"><span class="err">This field is required.</span></div>
+															
+																	  
+																	</div>
+																</div>
+																
+																
+															</div>
+														<!-- </span>
+													</div> -->
+													
+												</div>
+											</div>
+										</div>
+										<div class="step-box">
+											<div class="upload-documents">
+												<!-- <h3>Upload Documents:</h3> -->
+												<div class="upload-araa bg-white">
+													
+													<!-- <div class="upload-text">
+														<span> -->
+															<div class="gender-selection">
+																<h3>I find it difficult to express my opinions or feelings about my job conditions to my superiors</h3>
+																<h3 class="urdu">مجھے اپنے مقدّم ساتھیوں سے اپنے کام  پر درپیش معاملات یا اپنی رائے کا اظہار کرنے میں مشکل ہوتی ہے</h3>
+																<div class="form__group">
+																	<div class="row radios">
+																	  <div class="form__radio-group col-sm-12 col-sm-offset-6  col-md-offset-1 col-md-3 mr-20 text-center">
+																		Never<br><img src="{% static 'assets/img/never.png' %}" alt="happy">
+																	  </div>
+																	  <br/><br/>
+																	  <div class="col-md-1 pt-25">
+																		<label for="q23_1">
+																			<input class="r" type="radio" name="w4" id="q23_1" value="1"/>
+																			<span>1</span>
+																		</label>
+																		</div>	
+																		<div class="col-md-1 pt-25">							
+																			<label for="q23_2">
+																				<input type="radio" name="w4" id="q23_2" value="2" />
+																				<span>2</span>
+																			</label>
+																		</div>
+																			
+																		<div class="col-md-1 pt-25">	
+																			<label for="q23_3">
+																				<input type="radio" name="w4" id="q23_3" value="3" />
+																				<span>3</span>
+																			</label>
+																		</div>
+
+																		<div class="col-md-1 pt-25">	
+																			<label for="q23_4">
+																				<input type="radio" name="w4" id="q23_4" value="4" />
+																				<span>4</span>
+																			</label>
+																		</div>
+
+																		<div class="col-md-1 pt-25">	
+																			<label for="q23_5">
+																				<input type="radio" name="w4" id="q23_5" value="5" />
+																				<span>5</span>
+																			</label>
+																		</div>
+
+																		<div class="form__radio-group col-sm-12 col-md-3 text-center mr-20">
+																			Very Often<br><img src="{% static 'assets/img/often.png' %}" alt="often">
+																		</div>
+																		<div class='w4' style="display: none;"><span class="err">This field is required.</span></div>
+															
+																	  
+																	</div>
+																</div>
+																
+																
+															</div>
+														<!-- </span>
+													</div> -->
+													
+												</div>
+											</div>
+										</div>
+										<div class="step-box">
+											<div class="upload-documents">
+												<!-- <h3>Upload Documents:</h3> -->
+												<div class="upload-araa bg-white">
+													
+													<!-- <div class="upload-text">
+														<span> -->
+															<div class="gender-selection">
+																<h3>I feel that job pressures interfere with my family or personal life</h3>
+																<h3 class="urdu">مجھےایسا لگتا ہے کہ کام کا دباو میری ذاتی زندگی اور میرے خاندان پر اثرانداز ہوتا ہے </h3>
+																<div class="form__group">
+																	<div class="row radios">
+																	  <div class="form__radio-group col-sm-12 col-sm-offset-6  col-md-offset-1 col-md-3 mr-20 text-center">
+																		Never<br><img src="{% static 'assets/img/never.png' %}" alt="happy">
+																	  </div>
+																	  <br/><br/>
+																	  <div class="col-md-1 pt-25">
+																		<label for="q24_1">
+																			<input class="r" type="radio" name="w5" id="q24_1" value="1"/>
+																			<span>1</span>
+																		</label>
+																		</div>	
+																		<div class="col-md-1 pt-25">							
+																			<label for="q24_2">
+																				<input type="radio" name="w5" id="q24_2" value="2" />
+																				<span>2</span>
+																			</label>
+																		</div>
+																			
+																		<div class="col-md-1 pt-25">	
+																			<label for="q24_3">
+																				<input type="radio" name="w5" id="q24_3" value="3" />
+																				<span>3</span>
+																			</label>
+																		</div>
+
+																		<div class="col-md-1 pt-25">	
+																			<label for="q24_4">
+																				<input type="radio" name="w5" id="q24_4" value="4" />
+																				<span>4</span>
+																			</label>
+																		</div>
+
+																		<div class="col-md-1 pt-25">	
+																			<label for="q24_5">
+																				<input type="radio" name="w5" id="q24_5" value="5" />
+																				<span>5</span>
+																			</label>
+																		</div>
+
+																		<div class="form__radio-group col-sm-12 col-md-3 text-center mr-20">
+																			Very Often<br><img src="{% static 'assets/img/often.png' %}" alt="often">
+																		</div>
+																		<div class='w5' style="display: none;"><span class="err">This field is required.</span></div>
+															
+																	  
+																	</div>
+																</div>
+																
+																
+															</div>
+														<!-- </span>
+													</div> -->
+													
+												</div>
+											</div>
+										</div>
+										<div class="step-box">
+											<div class="upload-documents">
+												<!-- <h3>Upload Documents:</h3> -->
+												<div class="upload-araa bg-white">
+													
+													<!-- <div class="upload-text">
+														<span> -->
+															<div class="gender-selection">
+																<h3>I have adequate control or input over my work duties</h3>
+																<h3 class="urdu">میرا اپنے کام کے فرائض پر مناسب اختیار ہے </h3>
+																<div class="form__group">
+																	<div class="row radios">
+																	  <div class="form__radio-group col-sm-12 col-sm-offset-6 col-md-offset-1 col-md-3 mr-20 text-center">
+																		Very Often<br><img src="{% static 'assets/img/often.png' %}" alt="often">
+																	  </div>
+																	  <br/><br/>
+																	  <div class="col-md-1 pt-25">
+																		<label for="q25_1">
+																			<input class="r" type="radio" name="w6" id="q25_1" value="1"/>
+																			<span>1</span>
+																		</label>
+																		</div>	
+																		<div class="col-md-1 pt-25">							
+																			<label for="q25_2">
+																				<input type="radio" name="w6" id="q25_2" value="2" />
+																				<span>2</span>
+																			</label>
+																		</div>
+																			
+																		<div class="col-md-1 pt-25">	
+																			<label for="q25_3">
+																				<input type="radio" name="w6" id="q25_3" value="3" />
+																				<span>3</span>
+																			</label>
+																		</div>
+
+																		<div class="col-md-1 pt-25">	
+																			<label for="q25_4">
+																				<input type="radio" name="w6" id="q25_4" value="4" />
+																				<span>4</span>
+																			</label>
+																		</div>
+
+																		<div class="col-md-1 pt-25">	
+																			<label for="q25_5">
+																				<input type="radio" name="w6" id="q25_5" value="5" />
+																				<span>5</span>
+																			</label>
+																		</div>
+
+																		<div class="form__radio-group col-sm-12 col-md-3 text-center mr-20">
+																			Never<br><img src="{% static 'assets/img/never.png' %}" alt="happy">
+																			
+																		</div>
+																
+																		<div class='w6' style="display: none;"><span class="err">This field is required.</span></div>
+															
+																	</div>
+																</div>
+																
+																
+															</div>
+														<!-- </span>
+													</div> -->
+													
+												</div>
+											</div>
+										</div>
+										<div class="step-box">
+											<div class="upload-documents">
+												<!-- <h3>Upload Documents:</h3> -->
+												<div class="upload-araa bg-white">
+													
+													<!-- <div class="upload-text">
+														<span> -->
+															<div class="gender-selection">
+																<h3>I receive appropriate recognition or rewards for good performance</h3>
+																<h3 class="urdu">اچھی کارکردگی پر میری حوصلہ افزائی کی جاتی ہے</h3>
+																<div class="form__group">
+																	<div class="row radios">
+																	  <div class="form__radio-group col-sm-12 col-sm-offset-6  col-md-offset-1 col-md-3 mr-20 text-center">
+																		Very Often<br><img src="{% static 'assets/img/often.png' %}" alt="often">
+																	  </div>
+																	  <br/><br/>
+																	  <div class="col-md-1 pt-25">
+																		<label for="q26_1">
+																			<input class="r" type="radio" name="w7" id="q26_1" value="1"/>
+																			<span>1</span>
+																		</label>
+																		</div>	
+																		<div class="col-md-1 pt-25">							
+																			<label for="q26_2">
+																				<input type="radio" name="w7" id="q26_2" value="2" />
+																				<span>2</span>
+																			</label>
+																		</div>
+																			
+																		<div class="col-md-1 pt-25">	
+																			<label for="q26_3">
+																				<input type="radio" name="w7" id="q26_3" value="3" />
+																				<span>3</span>
+																			</label>
+																		</div>
+
+																		<div class="col-md-1 pt-25">	
+																			<label for="q26_4">
+																				<input type="radio" name="w7" id="q26_4" value="4" />
+																				<span>4</span>
+																			</label>
+																		</div>
+
+																		<div class="col-md-1 pt-25">	
+																			<label for="q26_5">
+																				<input type="radio" name="w7" id="q26_5" value="5" />
+																				<span>5</span>
+																			</label>
+																		</div>
+
+																		<div class="form__radio-group col-sm-12 col-md-3 text-center mr-20">
+																			Never<br><img src="{% static 'assets/img/never.png' %}" alt="happy">
+																			
+																		</div>
+																		<div class='w7' style="display: none;"><span class="err">This field is required.</span></div>
+															
+																	  
+																	</div>
+																</div>
+																
+																
+															</div>
+														<!-- </span>
+													</div> -->
+													
+												</div>
+											</div>
+										</div>
+										<div class="step-box">
+											<div class="upload-documents">
+												<!-- <h3>Upload Documents:</h3> -->
+												<div class="upload-araa bg-white">
+													
+													<!-- <div class="upload-text">
+														<span> -->
+															<div class="gender-selection">
+																<h3>I am able to utilize my skills and talents to the fullest extent at work</h3>
+																<h3 class="urdu">میں اپنے کام میں اپنی صلاحیتوں اور ہنر کا مکمل حد تک استعمال کرتا/ کرتی ہوں</h3>
+																<div class="form__group">
+																	<div class="row radios">
+																	  <div class="form__radio-group col-sm-12 col-sm-offset-6  col-md-offset-1 col-md-3 mr-20 text-center">
+																		Very Often<br><img src="{% static 'assets/img/often.png' %}" alt="often">
+																	  </div>
+																	  <br/><br/>
+																	  <div class="col-md-1 pt-25">
+																		<label for="q27_1">
+																			<input class="r" type="radio" name="w8" id="q27_1" value="1"/>
+																			<span>1</span>
+																		</label>
+																		</div>	
+																		<div class="col-md-1 pt-25">							
+																			<label for="q27_2">
+																				<input type="radio" name="w8" id="q27_2" value="2" />
+																				<span>2</span>
+																			</label>
+																		</div>
+																			
+																		<div class="col-md-1 pt-25">	
+																			<label for="q27_3">
+																				<input type="radio" name="w8" id="q27_3" value="3" />
+																				<span>3</span>
+																			</label>
+																		</div>
+
+																		<div class="col-md-1 pt-25">	
+																			<label for="q27_4">
+																				<input type="radio" name="w8" id="q27_4" value="4" />
+																				<span>4</span>
+																			</label>
+																		</div>
+
+																		<div class="col-md-1 pt-25">	
+																			<label for="q27_5">
+																				<input type="radio" name="w8" id="q27_5" value="5" />
+																				<span>5</span>
+																			</label>
+																		</div>
+
+																		<div class="form__radio-group col-sm-12 col-md-3 text-center mr-20">
+																			Never<br><img src="{% static 'assets/img/never.png' %}" alt="happy">
+																			
+																		</div>
+																		<div class='w8' style="display: none;"><span class="err">This field is required.</span></div>
+															
+																	  
+																	</div>
+																</div>
+																
+																
+															</div>
+														<!-- </span>
+													</div> -->
+													
+												</div>
+											</div>
+										</div>
+										
+								</div>
+							</div>
+						</div>
+						<!-- /.inner -->
+						<div class="actions">
+							<ul>
+								<li><span class="js-btn-prev" title="BACK"><i class="fa fa-arrow-left"></i> BACK </span></li>
+								<li><span class="js-btn-next" title="NEXT">NEXT <i class="fa fa-arrow-right"></i></span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				
+				
+
+				<!-- div 5 Life Satisfaction-->
+				<div class="multisteps-form__panel" data-animation="slideHorz">
+					<div class="wizard-forms">
+						<div class="inner pb-100 clearfix">
+							<div class="form-content pera-content">
+								<div class="step-inner-content">
+									<span class="step-no bottom-line">Step 4</span>
+									<div class="step-progress float-end">
+										<span>5 of 6 completed</span>
+										<div class="step-progress-bar">
+											<div class="progress">
+												<div class="progress-bar" style="width:70%"></div>
+											</div>
+										</div>
+									</div>
+
+        								<br><br>
+									<p>Use the 1 - 7 scale below to indicate your agreement with each item by selecting the appropriate number. Please be open and honest in your responding</p>
+									
+									<div class="step-box">
+										<div class="upload-documents">
+											<!-- <h3>Upload Documents:</h3> -->
+											<div class="upload-araa bg-white">
+												
+												<!-- <div class="upload-text">
+													<span> -->
+														<div class="gender-selection">
+															<h3>In most ways my life is close to my ideal</h3>
+															<h3 class="urdu">زیادہ تر معاملات میں میری زندگی مثالی ہے</h3>
+															<div class="form__group">
+																<div class="row radios">
+																  <div class="form__radio-group col-sm-12 col-sm-offset-6  col-md-offset-1 col-md-2 mr-20 text-center">
+																	Disagree<br><img src="{% static 'assets/img/dislike.png' %}" alt="happy">
+																  </div>
+																  <br/><br/>
+																  <div class="col-md-1 pt-25">
+																	<label for="q12_1">
+																		<input class="r" type="radio" name="l1" id="q12_1" value="1"/>
+																		<span>1</span>
+																	</label>
+																	</div>	
+																	<div class="col-md-1 pt-25">							
+																		<label for="q12_2">
+																			<input type="radio" name="l1" id="q12_2" value="2" />
+																			<span>2</span>
+																		</label>
+																	</div>
+																		
+																	<div class="col-md-1 pt-25">	
+																		<label for="q12_3">
+																			<input type="radio" name="l1" id="q12_3" value="3" />
+																			<span>3</span>
+																		</label>
+																	</div>
+
+																	<div class="col-md-1 pt-25">	
+																		<label for="q12_4">
+																			<input type="radio" name="l1" id="q12_4" value="4" />
+																			<span>4</span>
+																		</label>
+																	</div>
+
+																	<div class="col-md-1 pt-25">	
+																		<label for="q12_5">
+																			<input type="radio" name="l1" id="q12_5" value="5" />
+																			<span>5</span>
+																		</label>
+																	</div>
+																	<div class="col-md-1 pt-25">	
+																		<label for="q12_6">
+																			<input type="radio" name="l1" id="q12_6" value="6" />
+																			<span>6</span>
+																		</label>
+																	</div>
+																	<div class="col-md-1 pt-25">	
+																		<label for="q12_7">
+																			<input type="radio" name="l1" id="q12_7" value="7" />
+																			<span>7</span>
+																		</label>
+																	</div>
+
+																	<div class="form__radio-group col-sm-12 col-md-2 text-center mr-20">
+																		Strongly Agree<br><img src="{% static 'assets/img/like.png' %}" alt="often">
+																	</div>
+																	<div class='l1' style="display: none;"><span class="err">This field is required.</span></div>
+															
+																  
+																</div>
+															</div>
+															
+														</div>
+													<!-- </span>
+												</div> -->
+												
+											</div>
+										</div>
+									</div>
+									<div class="step-box">
+										<div class="upload-documents">
+											<!-- <h3>Upload Documents:</h3> -->
+											<div class="upload-araa bg-white">
+												
+												<!-- <div class="upload-text">
+													<span> -->
+														<div class="gender-selection">
+															<h3>The conditions of my life are excellent</h3>
+															<h3 class="urdu">میری زندگی کے حالات بہترین ہیں</h3>
+															<div class="form__group">
+																<div class="row radios">
+																  <div class="form__radio-group col-sm-12 col-sm-offset-6  col-md-offset-1 col-md-2 mr-20 text-center">
+																	Disagree<br><img src="{% static 'assets/img/dislike.png' %}" alt="happy">
+																  </div>
+																  <br/><br/>
+																  <div class="col-md-1 pt-25">
+																	<label for="q8_1">
+																		<input class="r" type="radio" name="l2" id="q8_1" value="1"/>
+																		<span>1</span>
+																	</label>
+																	</div>	
+																	<div class="col-md-1 pt-25">							
+																		<label for="q8_2">
+																			<input type="radio" name="l2" id="q8_2" value="2" />
+																			<span>2</span>
+																		</label>
+																	</div>
+																		
+																	<div class="col-md-1 pt-25">	
+																		<label for="q8_3">
+																			<input type="radio" name="l2" id="q8_3" value="3" />
+																			<span>3</span>
+																		</label>
+																	</div>
+
+																	<div class="col-md-1 pt-25">	
+																		<label for="q8_4">
+																			<input type="radio" name="l2" id="q8_4" value="4" />
+																			<span>4</span>
+																		</label>
+																	</div>
+
+																	<div class="col-md-1 pt-25">	
+																		<label for="q8_5">
+																			<input type="radio" name="l2" id="q8_5" value="5" />
+																			<span>5</span>
+																		</label>
+																	</div>
+																	<div class="col-md-1 pt-25">	
+																		<label for="q8_6">
+																			<input type="radio" name="l2" id="q8_6" value="6" />
+																			<span>6</span>
+																		</label>
+																	</div>
+																	<div class="col-md-1 pt-25">	
+																		<label for="q8_7">
+																			<input type="radio" name="l2" id="q8_7" value="7" />
+																			<span>7</span>
+																		</label>
+																	</div>
+
+																	<div class="form__radio-group col-sm-12 col-md-2 text-center mr-20">
+																		Strongly Agree<br><img src="{% static 'assets/img/like.png' %}" alt="often">
+																	</div>
+																	<div class='l2' style="display: none;"><span class="err">This field is required.</span></div>
+															
+																  
+																</div>
+															</div>
+															
+														</div>
+													<!-- </span>
+												</div> -->
+												
+											</div>
+										</div>
+									</div>
+									<div class="step-box">
+										<div class="upload-documents">
+											<!-- <h3>Upload Documents:</h3> -->
+											<div class="upload-araa bg-white">
+												
+												<!-- <div class="upload-text">
+													<span> -->
+														<div class="gender-selection">
+															<h3>I am satisfied with my life</h3>
+															<h3 class="urdu">میں اپنی زندگی سے مطمئن ہوں</h3>
+															<div class="form__group">
+																<div class="row radios">
+																  <div class="form__radio-group col-sm-12 col-sm-offset-6  col-md-offset-1 col-md-2 mr-20 text-center">
+																	Disagree<br><img src="{% static 'assets/img/dislike.png' %}" alt="happy">
+																  </div>
+																  <br/><br/>
+																  <div class="col-md-1 pt-25">
+																	<label for="q9_1">
+																		<input class="r" type="radio" name="l3" id="q9_1" value="1"/>
+																		<span>1</span>
+																	</label>
+																	</div>	
+																	<div class="col-md-1 pt-25">							
+																		<label for="q9_2">
+																			<input type="radio" name="l3" id="q9_2" value="2" />
+																			<span>2</span>
+																		</label>
+																	</div>
+																		
+																	<div class="col-md-1 pt-25">	
+																		<label for="q9_3">
+																			<input type="radio" name="l3" id="q9_3" value="3" />
+																			<span>3</span>
+																		</label>
+																	</div>
+
+																	<div class="col-md-1 pt-25">	
+																		<label for="q9_4">
+																			<input type="radio" name="l3" id="q9_4" value="4" />
+																			<span>4</span>
+																		</label>
+																	</div>
+
+																	<div class="col-md-1 pt-25">	
+																		<label for="q9_5">
+																			<input type="radio" name="l3" id="q9_5" value="5" />
+																			<span>5</span>
+																		</label>
+																	</div>
+																	<div class="col-md-1 pt-25">	
+																		<label for="q9_6">
+																			<input type="radio" name="l3" id="q9_6" value="6" />
+																			<span>6</span>
+																		</label>
+																	</div>
+																	<div class="col-md-1 pt-25">	
+																		<label for="q9_7">
+																			<input type="radio" name="l3" id="q9_7" value="7" />
+																			<span>7</span>
+																		</label>
+																	</div>
+
+																	<div class="form__radio-group col-sm-12 col-md-2 text-center mr-20">
+																		Strongly Agree<br><img src="{% static 'assets/img/like.png' %}" alt="often">
+																	</div>
+																	<div class='l3' style="display: none;"><span class="err">This field is required.</span></div>
+															
+																  
+																</div>
+															</div>
+															
+														</div>
+													<!-- </span>
+												</div> -->
+												
+											</div>
+										</div>
+									</div>
+									<div class="step-box">
+										<div class="upload-documents">
+											<!-- <h3>Upload Documents:</h3> -->
+											<div class="upload-araa bg-white">
+												
+												<!-- <div class="upload-text">
+													<span> -->
+														<div class="gender-selection">
+															<h3>So far I have gotten the important things I want in life</h3>
+															<h3 class="urdu">میں نے جس اہم چیز کو بھی  چاہا اُسے اپنی زندگی میں پالیا</h3>
+															<div class="form__group">
+																<div class="row radios">
+																  <div class="form__radio-group col-sm-12 col-sm-offset-6  col-md-offset-1 col-md-2 mr-20 text-center">
+																	Disagree<br><img src="{% static 'assets/img/dislike.png' %}" alt="happy">
+																  </div>
+																  <br/><br/>
+																  <div class="col-md-1 pt-25">
+																	<label for="q10_1">
+																		<input class="r" type="radio" name="l4" id="q10_1" value="1"/>
+																		<span>1</span>
+																	</label>
+																	</div>	
+																	<div class="col-md-1 pt-25">							
+																		<label for="q10_2">
+																			<input type="radio" name="l4" id="q10_2" value="2" />
+																			<span>2</span>
+																		</label>
+																	</div>
+																		
+																	<div class="col-md-1 pt-25">	
+																		<label for="q10_3">
+																			<input type="radio" name="l4" id="q10_3" value="3" />
+																			<span>3</span>
+																		</label>
+																	</div>
+
+																	<div class="col-md-1 pt-25">	
+																		<label for="q10_4">
+																			<input type="radio" name="l4" id="q10_4" value="4" />
+																			<span>4</span>
+																		</label>
+																	</div>
+
+																	<div class="col-md-1 pt-25">	
+																		<label for="q10_5">
+																			<input type="radio" name="l4" id="q10_5" value="5" />
+																			<span>5</span>
+																		</label>
+																	</div>
+																	<div class="col-md-1 pt-25">	
+																		<label for="q10_6">
+																			<input type="radio" name="l4" id="q10_6" value="6" />
+																			<span>6</span>
+																		</label>
+																	</div>
+																	<div class="col-md-1 pt-25">	
+																		<label for="q10_7">
+																			<input type="radio" name="l4" id="q10_7" value="7" />
+																			<span>7</span>
+																		</label>
+																	</div>
+
+																	<div class="form__radio-group col-sm-12 col-md-2 text-center mr-20">
+																		Strongly Agree<br><img src="{% static 'assets/img/like.png' %}" alt="often">
+																	</div>
+																	<div class='l4' style="display: none;"><span class="err">This field is required.</span></div>
+															
+																  
+																</div>
+															</div>
+															
+														</div>
+													<!-- </span>
+												</div> -->
+												
+											</div>
+										</div>
+									</div>
+									<div class="step-box">
+										<div class="upload-documents">
+											<!-- <h3>Upload Documents:</h3> -->
+											<div class="upload-araa bg-white">
+												
+												<!-- <div class="upload-text">
+													<span> -->
+														<div class="gender-selection">
+															<h3>If I could live my life over, I would change almost nothing</h3>
+															<h3 class="urdu">اگر مجھے اپنی زندگی کو دوبارہ جینے کا موقع ملے تو میں اپنی زندگی میں کچھ تبدیلی نہیں کرونگا/ کرونگی</h3>
+															<div class="form__group">
+																<div class="row radios">
+																  <div class="form__radio-group col-sm-12 col-sm-offset-6  col-md-offset-1 col-md-2 mr-20 text-center">
+																	Disagree<br><img src="{% static 'assets/img/dislike.png' %}" alt="happy">
+																  </div>
+																  <br/><br/>
+																  <div class="col-md-1 pt-25">
+																	<label for="q11_1">
+																		<input class="r" type="radio" name="l5" id="q11_1" value="1"/>
+																		<span>1</span>
+																	</label>
+																	</div>	
+																	<div class="col-md-1 pt-25">							
+																		<label for="q11_2">
+																			<input type="radio" name="l5" id="q11_2" value="2" />
+																			<span>2</span>
+																		</label>
+																	</div>
+																		
+																	<div class="col-md-1 pt-25">	
+																		<label for="q11_3">
+																			<input type="radio" name="l5" id="q11_3" value="3" />
+																			<span>3</span>
+																		</label>
+																	</div>
+
+																	<div class="col-md-1 pt-25">	
+																		<label for="q11_4">
+																			<input type="radio" name="l5" id="q11_4" value="4" />
+																			<span>4</span>
+																		</label>
+																	</div>
+
+																	<div class="col-md-1 pt-25">	
+																		<label for="q11_5">
+																			<input type="radio" name="l5" id="q11_5" value="5" />
+																			<span>5</span>
+																		</label>
+																	</div>
+																	<div class="col-md-1 pt-25">	
+																		<label for="q11_6">
+																			<input type="radio" name="l5" id="q11_6" value="6" />
+																			<span>6</span>
+																		</label>
+																	</div>
+																	<div class="col-md-1 pt-25">	
+																		<label for="q11_7">
+																			<input type="radio" name="l5" id="q11_7" value="7" />
+																			<span>7</span>
+																		</label>
+																	</div>
+
+																	<div class="form__radio-group col-sm-12 col-md-2 text-center mr-20">
+																		Strongly Agree<br><img src="{% static 'assets/img/like.png' %}" alt="often">
+																	</div>
+																	<div class='l5' style="display: none;"><span class="err">This field is required.</span></div>
+															
+																  
+																</div>
+															</div>
+															
+														</div>
+													<!-- </span>
+												</div> -->
+												
+											</div>
+										</div>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+						<!-- /.inner -->
+						<div class="actions">
+							<ul>
+								<li><span class="js-btn-prev" title="BACK"><i class="fa fa-arrow-left"></i> BACK </span></li>
+								<li><span class="js-btn-next" title="NEXT">NEXT <i class="fa fa-arrow-right"></i></span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				
+				<!-- div 6 Anxiety -->
+				<div class="multisteps-form__panel" data-animation="slideHorz">
+					<div class="wizard-forms">
+						<div class="inner pb-100 clearfix">
+							<div class="form-content pera-content">
+								<div class="step-inner-content">
+									<span class="step-no bottom-line">Step 5</span>
+									<div class="step-progress float-end">
+										<span>5 of 6 completed</span>
+										<div class="step-progress-bar">
+											<div class="progress">
+												<div class="progress-bar" style="width:90%"></div>
+											</div>
+										</div>
+									</div>
+								<br><br>
+									<p>Please read each statement and select accordingly how much the statement
+										applied to you <b style="font-weight: 600;">over the past week</b>. 
+									</p>
+									
+									<div class="step-box">
+										<div class="upload-documents">
+											<!-- <h3>Upload Documents:</h3> -->
+											<div class="upload-araa bg-white">
+												
+												<!-- <div class="upload-text">
+													<span> -->
+														<div class="gender-selection">
+															<h3>I was aware of dryness of my mouth</h3>
+															<h3 class="urdu">میں اپنا منہ خشک محسوس کرتا/کرتی ہوں</h3>
+															<div class="form__group">
+																<div class="row radios">
+																  <div class="form__radio-group col-sm-12 col-sm-offset-6  col-md-offset-1 col-md-3 mr-20 text-center">
+																	Disagree<br><img src="{% static 'assets/img/dislike.png' %}" alt="happy">
+																  </div>
+																  <br/><br/>
+																  <div class="col-md-1 pt-25 pr-65">
+																	<label for="q13_1">
+																		<input class="r" type="radio" name="a1" id="q13_1" value="1"/>
+																		<span>1</span>
+																	</label>
+																	</div>	
+																	<div class="col-md-1 pt-25 pr-65">							
+																		<label for="q13_2">
+																			<input type="radio" name="a1" id="q13_2" value="2" />
+																			<span>2</span>
+																		</label>
+																	</div>
+																		
+																	<div class="col-md-1 pt-25 pr-65">	
+																		<label for="q13_3">
+																			<input type="radio" name="a1" id="q13_3" value="3" />
+																			<span>3</span>
+																		</label>
+																	</div>
+
+																	<div class="col-md-1 pt-25 pr-65">	
+																		<label for="q13_4">
+																			<input type="radio" name="a1" id="q13_4" value="4" />
+																			<span>4</span>
+																		</label>
+																	</div>
+
+																	<div class="form__radio-group col-sm-12 col-md-3 text-center mr-20">
+																		Strongly Agree<br><img src="{% static 'assets/img/like.png' %}" alt="often">
+																	</div>
+															
+																	<div class='a1' style="display: none;"><span class="err">This field is required.</span></div>
+															
+																  
+																</div>
+															</div>
+															
+														</div>
+													<!-- </span>
+												</div> -->
+												
+											</div>
+										</div>
+									</div>
+									<div class="step-box">
+										<div class="upload-documents">
+											<!-- <h3>Upload Documents:</h3> -->
+											<div class="upload-araa bg-white">
+												
+												<!-- <div class="upload-text">
+													<span> -->
+														<div class="gender-selection">
+															<h3>I experienced breathing difficulty (e.g. excessively rapid breathing, breathlessness in the absence of physical exertion)</h3>
+															<h3 class="urdu">مجھے سانس لینے میں مشکل محسوس ہوتی ہوں</h3>
+															<div class="form__group">
+																<div class="row radios">
+																  <div class="form__radio-group col-sm-12 col-sm-offset-6  col-md-offset-1 col-md-3 mr-20 text-center">
+																	Disagree<br><img src="{% static 'assets/img/dislike.png' %}" alt="happy">
+																  </div>
+																  <br/><br/>
+																  <div class="col-md-1 pt-25 pr-65">
+																	<label for="q14_1">
+																		<input class="r" type="radio" name="a2" id="q14_1" value="1"/>
+																		<span>1</span>
+																	</label>
+																	</div>	
+																	<div class="col-md-1 pt-25 pr-65">							
+																		<label for="q14_2">
+																			<input type="radio" name="a2" id="q14_2" value="2" />
+																			<span>2</span>
+																		</label>
+																	</div>
+																		
+																	<div class="col-md-1 pt-25 pr-65">	
+																		<label for="q14_3">
+																			<input type="radio" name="a2" id="q14_3" value="3" />
+																			<span>3</span>
+																		</label>
+																	</div>
+
+																	<div class="col-md-1 pt-25 pr-65">	
+																		<label for="q14_4">
+																			<input type="radio" name="a2" id="q14_4" value="4" />
+																			<span>4</span>
+																		</label>
+																	</div>
+
+																	<div class="form__radio-group col-sm-12 col-md-3 text-center mr-20">
+																		Strongly Agree<br><img src="{% static 'assets/img/like.png' %}" alt="often">
+																	</div>
+																	<div class='a2' style="display: none;"><span class="err">This field is required.</span></div>
+															
+																  
+																</div>
+															</div>
+															
+														</div>
+													<!-- </span>
+												</div> -->
+												
+											</div>
+										</div>
+									</div>
+									<div class="step-box">
+										<div class="upload-documents">
+											<!-- <h3>Upload Documents:</h3> -->
+											<div class="upload-araa bg-white">
+												
+												<!-- <div class="upload-text">
+													<span> -->
+														<div class="gender-selection">
+															<h3>I experienced trembling (e.g. in the hands)</h3>
+															<h3 class="urdu">میں اپنے آپ کو کبھی کبھی متزلزل/لرزتا ہوامحسوس کرتا/کرتی ہوں (جیسے ہاتھوں کا لرزنا یا کپکپاہٹ محسوس ہونا )</h3>
+															<div class="form__group">
+																<div class="row radios">
+																  <div class="form__radio-group col-sm-12 col-sm-offset-6  col-md-offset-1 col-md-3 mr-20 text-center">
+																	Disagree<br><img src="{% static 'assets/img/dislike.png' %}" alt="happy">
+																  </div>
+																  <br/><br/>
+																  <div class="col-md-1 pt-25 pr-65">
+																	<label for="q15_1">
+																		<input class="r" type="radio" name="a3" id="q15_1" value="1"/>
+																		<span>1</span>
+																	</label>
+																	</div>	
+																	<div class="col-md-1 pt-25 pr-65">							
+																		<label for="q15_2">
+																			<input type="radio" name="a3" id="q15_2" value="2" />
+																			<span>2</span>
+																		</label>
+																	</div>
+																		
+																	<div class="col-md-1 pt-25 pr-65">	
+																		<label for="q15_3">
+																			<input type="radio" name="a3" id="q15_3" value="3" />
+																			<span>3</span>
+																		</label>
+																	</div>
+
+																	<div class="col-md-1 pt-25 pr-65">	
+																		<label for="q15_4">
+																			<input type="radio" name="a3" id="q15_4" value="4" />
+																			<span>4</span>
+																		</label>
+																	</div>
+
+																	<div class="form__radio-group col-sm-12 col-md-3 text-center mr-20">
+																		Strongly Agree<br><img src="{% static 'assets/img/like.png' %}" alt="often">
+																	</div>
+															
+																	<div class='a3' style="display: none;"><span class="err">This field is required.</span></div>
+															
+																</div>
+															</div>
+															
+														</div>
+													<!-- </span>
+												</div> -->
+												
+											</div>
+										</div>
+									</div>
+									<div class="step-box">
+										<div class="upload-documents">
+											<!-- <h3>Upload Documents:</h3> -->
+											<div class="upload-araa bg-white">
+												
+												<!-- <div class="upload-text">
+													<span> -->
+														<div class="gender-selection">
+															<h3>I was worried about situations in which I might panic and make a fool of myself</h3>
+															<h3 class="urdu">میں اُن حالات سے پریشان ہوتا /ہوتی ہوں جس میں میں گھبرا جاؤں</h3>
+															<div class="form__group">
+																<div class="row radios">
+																  <div class="form__radio-group col-sm-12 col-sm-offset-6  col-md-offset-1 col-md-3 mr-20 text-center">
+																	Disagree<br><img src="{% static 'assets/img/dislike.png' %}" alt="happy">
+																  </div>
+																  <br/><br/>
+																  <div class="col-md-1 pt-25 pr-65">
+																	<label for="q16_1">
+																		<input class="r" type="radio" name="a4" id="q16_1" value="1"/>
+																		<span>1</span>
+																	</label>
+																	</div>	
+																	<div class="col-md-1 pt-25 pr-65">							
+																		<label for="q16_2">
+																			<input type="radio" name="a4" id="q16_2" value="2" />
+																			<span>2</span>
+																		</label>
+																	</div>
+																		
+																	<div class="col-md-1 pt-25 pr-65">	
+																		<label for="q16_3">
+																			<input type="radio" name="a4" id="q16_3" value="3" />
+																			<span>3</span>
+																		</label>
+																	</div>
+
+																	<div class="col-md-1 pt-25 pr-65">	
+																		<label for="q16_4">
+																			<input type="radio" name="a4" id="q16_4" value="4" />
+																			<span>4</span>
+																		</label>
+																	</div>
+
+																	<div class="form__radio-group col-sm-12 col-md-3 text-center mr-20">
+																		Strongly Agree<br><img src="{% static 'assets/img/like.png' %}" alt="often">
+																	</div>
+															
+																	<div class='a4' style="display: none;"><span class="err">This field is required.</span></div>
+															
+																</div>
+															</div>
+															
+														</div>
+													<!-- </span>
+												</div> -->
+												
+											</div>
+										</div>
+									</div>
+									<div class="step-box">
+										<div class="upload-documents">
+											<!-- <h3>Upload Documents:</h3> -->
+											<div class="upload-araa bg-white">
+												
+												<!-- <div class="upload-text">
+													<span> -->
+														<div class="gender-selection">
+															<h3>I felt I was close to panic</h3>
+															<h3 class="urdu">میں اپنے آپ کو گھبرایا ہوا محسوس کرتا /کرتی ہوں </h3>
+															<div class="form__group">
+																<div class="row radios">
+																  <div class="form__radio-group col-sm-12 col-sm-offset-6  col-md-offset-1 col-md-3 mr-20 text-center">
+																	Disagree<br><img src="{% static 'assets/img/dislike.png' %}" alt="happy">
+																  </div>
+																  <br/><br/>
+																  <div class="col-md-1 pt-25 pr-65">
+																	<label for="q17_1">
+																		<input class="r" type="radio" name="a5" id="q17_1" value="1"/>
+																		<span>1</span>
+																	</label>
+																	</div>	
+																	<div class="col-md-1 pt-25 pr-65">							
+																		<label for="q17_2">
+																			<input type="radio" name="a5" id="q17_2" value="2" />
+																			<span>2</span>
+																		</label>
+																	</div>
+																		
+																	<div class="col-md-1 pt-25 pr-65">	
+																		<label for="q17_3">
+																			<input type="radio" name="a5" id="q17_3" value="3" />
+																			<span>3</span>
+																		</label>
+																	</div>
+
+																	<div class="col-md-1 pt-25 pr-65">	
+																		<label for="q17_4">
+																			<input type="radio" name="a5" id="q17_4" value="4" />
+																			<span>4</span>
+																		</label>
+																	</div>
+
+																	<div class="form__radio-group col-sm-12 col-md-3 text-center mr-20">
+																		Strongly Agree<br><img src="{% static 'assets/img/like.png' %}" alt="often">
+																	</div>
+															
+																	<div class='a5' style="display: none;"><span class="err">This field is required.</span></div>
+															
+																</div>
+															</div>
+															
+														</div>
+													<!-- </span>
+												</div> -->
+												
+											</div>
+										</div>
+									</div>
+									<div class="step-box">
+										<div class="upload-documents">
+											<!-- <h3>Upload Documents:</h3> -->
+											<div class="upload-araa bg-white">
+												
+												<!-- <div class="upload-text">
+													<span> -->
+														<div class="gender-selection">
+															<h3>I was aware of the action of my heart in the absence of physical exertion (e.g. sense of heart rate increase, heart missing a beat)</h3>
+															<h3 class="urdu">میں اپنے دل کی دھڑکن کو عام حالات میں محسوس کرتا/کرتی ہوں </h3>
+															<div class="form__group">
+																<div class="row radios">
+																  <div class="form__radio-group col-sm-12 col-sm-offset-6  col-md-offset-1 col-md-3 mr-20 text-center">
+																	Disagree<br><img src="{% static 'assets/img/dislike.png' %}" alt="happy">
+																  </div>
+																  <br/><br/>
+																  <div class="col-md-1 pt-25 pr-65">
+																	<label for="q18_1">
+																		<input class="r" type="radio" name="a6" id="q18_1" value="1"/>
+																		<span>1</span>
+																	</label>
+																	</div>	
+																	<div class="col-md-1 pt-25 pr-65">							
+																		<label for="q18_2">
+																			<input type="radio" name="a6" id="q18_2" value="2" />
+																			<span>2</span>
+																		</label>
+																	</div>
+																		
+																	<div class="col-md-1 pt-25 pr-65">	
+																		<label for="q18_3">
+																			<input type="radio" name="a6" id="q18_3" value="3" />
+																			<span>3</span>
+																		</label>
+																	</div>
+
+																	<div class="col-md-1 pt-25 pr-65">	
+																		<label for="q18_4">
+																			<input type="radio" name="a6" id="q18_4" value="4" />
+																			<span>4</span>
+																		</label>
+																	</div>
+
+																	<div class="form__radio-group col-sm-12 col-md-3 text-center mr-20">
+																		Strongly Agree<br><img src="{% static 'assets/img/like.png' %}" alt="often">
+																	</div>
+																	<div class='a6' style="display: none;"><span class="err">This field is required.</span></div>
+															
+																  
+																</div>
+															</div>
+															
+														</div>
+													<!-- </span>
+												</div> -->
+												
+											</div>
+										</div>
+									</div>
+									<div class="step-box">
+										<div class="upload-documents">
+											<!-- <h3>Upload Documents:</h3> -->
+											<div class="upload-araa bg-white">
+												
+												<!-- <div class="upload-text">
+													<span> -->
+														<div class="gender-selection">
+															<h3>I felt scared without any good reason</h3>
+															<h3 class="urdu">میں بغیر کسی وجہ کے ڈر یا خوف محسوس کرتا/کرتی ہوں</h3>
+															<div class="form__group">
+																<div class="row radios">
+																  <div class="form__radio-group col-sm-12 col-sm-offset-6  col-md-offset-1 col-md-3 mr-20 text-center">
+																	Disagree<br><img src="{% static 'assets/img/dislike.png' %}" alt="happy">
+																  </div>
+																  <br/><br/>
+																  <div class="col-md-1 pt-25 pr-65">
+																	<label for="q19_1">
+																		<input class="r" type="radio" name="a7" id="q19_1" value="1"/>
+																		<span>1</span>
+																	</label>
+																	</div>	
+																	<div class="col-md-1 pt-25 pr-65">							
+																		<label for="q19_2">
+																			<input type="radio" name="a7" id="q19_2" value="2" />
+																			<span>2</span>
+																		</label>
+																	</div>
+																		
+																	<div class="col-md-1 pt-25 pr-65">	
+																		<label for="q19_3">
+																			<input type="radio" name="a7" id="q19_3" value="3" />
+																			<span>3</span>
+																		</label>
+																	</div>
+
+																	<div class="col-md-1 pt-25 pr-65">	
+																		<label for="q19_4">
+																			<input type="radio" name="a7" id="q19_4" value="4" />
+																			<span>4</span>
+																		</label>
+																	</div>
+
+																	<div class="form__radio-group col-sm-12 col-md-3 text-center mr-20">
+																		Strongly Agree<br><img src="{% static 'assets/img/like.png' %}" alt="often">
+																	</div>
+																	<div class='a7' style="display: none;"><span class="err">This field is required.</span></div>
+															
+																  
+																</div>
+															</div>
+															
+														</div>
+													<!-- </span>
+												</div> -->
+												
+											</div>
+										</div>
+									</div>
+									<!-- <div class="services-select-option">
+										<ul>
+											<li class="bg-white active"><label>Web Design <input type="radio" id="condition2" name="web_service" value="Web Design" checked></label></li>
+											<li class="bg-white"><label>Web Development <input type="radio" name="web_service" value="Web Development"></label></li>
+											<li class="bg-white"><label>Graphics Design <input type="radio" name="web_service" value="Graphics Design"></label></li>
+											<li class="bg-white"><label>SEO <input type="radio" name="web_service" value="SEO"></label></li>
+
+										</ul>
+									</div>
+									<div class="conditional" data-condition="#condition2 && web_service == 'Web Design'">
+										<div class="form-inner-area">
+										<label> <h3>Details</h3></label>
+											<input type="text" name="web_service_detail">
+										</div>
+									</div>
+									<div class="language-select">
+										<p>I want to browse projects in the following languages: </p>
+										<select name="languages">
+											<option>English</option>
+											<option>Arabic</option>
+											<option>Spanish</option>
+											<option>French</option>
+										</select>
+									</div>
+									<div class="comment-box">
+										<p><i class="fas fa-comments"></i> Write Somthing note</p>
+										<textarea name="full_comments" placeholder="Write here"></textarea>
+									</div> -->
+								</div>
+							</div>
+						</div>
+						<!-- ./inner -->
+						<div class="actions">
+							<ul>
+								<li><span class="js-btn-prev" title="BACK"><i class="fa fa-arrow-left"></i> BACK </span></li>
+								<li><span class="js-btn-next" title="NEXT">NEXT <i class="fa fa-arrow-right"></i></span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				
+				<!-- div 7 Activity_3_TMT_B -->
+				<div class="multisteps-form__panel" data-animation="slideHorz">
+					<div class="wizard-forms">
+						<div class="inner pb-100 clearfix">
+							<div class="form-content pera-content">
+								<div class="step-inner-content">
+									<span class="step-no bottom-line">Step 6</span>
+									<div class="step-progress float-end">
+										<span>6 of 6 completed</span>
+										<div class="step-progress-bar">
+											<div class="progress">
+												<div class="progress-bar" style="width:100%"></div>
+											</div>
+										</div>
+									</div>
+
+								
+									<h2>Visual Array Test</h2>
+    								<div style="font-size:20px;"><b>INSTRUCTIONS</b><br><br>This is a visual array task. On each trial, you will be shown a set of four, six, or eight squares. You will then be shown a test set, which has one square encircled. You have to indicate whether the encircled square is of the same color as that of the original set.<br><br>Press "S" if color is same and "K" if color is different. <br><br><img src="{% static 'working-memory-tests/img/instructions.png' %}" style="width:550px; height:480px"></img><br><br>
+											<u class="test-click" ><a href="" 
+                              target="popup" 
+                              onclick="window.open('{% static 'working-memory-tests/visual_array_task.html' %}','popup','width=600,height=600,scrollbars=no,resizable=no'); return false;">
+                              Click to Start Test
+                            </a>	</u>
+                           
+									
+								</div>
+								</div>
+							</div>
+						</div>
+			
+						<!-- /.inner -->
+						<div class="actions">
+							<ul>
+								<li><span class="js-btn-prev" title="BACK"><i class="fa fa-arrow-left"></i> BACK </span></li>
+								<li><button formaction="{% url 'useraccounts:results' %}"  type="submit" title="SUBMIT">SUBMIT <i class="fa fa-arrow-right"></i></button></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+	<script src="{% static 'assets/js/jquery-3.3.1.min.js' %}"></script>
+	<script src="{% static 'assets/js/jquery.validate.min.js' %}"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+	<script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'assets/js/conditionize.flexible.jquery.min.js' %}"></script>
+	<script src="{% static 'assets/js/main.js' %}"></script>
+	<script src="{% static 'assets/js/switch.js' %}"></script>
+	<script>
+		document.getElementById('startTime').value = Math.round(Date.now()/1000);
+		console.log(Date.now());
+		$("#files").change(function() {
+			filename = this.files[0].name
+			// console.log(filename);
+		});
+
+		function UploadFile() {
+			var reader = new FileReader();
+			var file = document.getElementById('attach').files[0];
+			reader.onload = function() {
+				document.getElementById('fileContent').value = reader.result;
+				document.getElementById('filename').value = file.name;
+				document.getElementById('wizard').submit();
+			}
+			reader.readAsDataURL(file);
+		}
+
+		$(document).ready(function() {
+			$('.conditional').conditionize();
+		});
+	</script>
+</body>
+
+</html>

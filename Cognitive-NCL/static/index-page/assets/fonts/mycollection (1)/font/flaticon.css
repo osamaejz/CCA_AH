@@ -1,0 +1,53 @@
+@font-face {
+    font-family: "flaticon";
+    src: url("./flaticon.ttf?55414d7bab61eb2ecc88cb4574a9d4f8") format("truetype"),
+url("./flaticon.woff?55414d7bab61eb2ecc88cb4574a9d4f8") format("woff"),
+url("./flaticon.woff2?55414d7bab61eb2ecc88cb4574a9d4f8") format("woff2"),
+url("./flaticon.eot?55414d7bab61eb2ecc88cb4574a9d4f8#iefix") format("embedded-opentype"),
+url("./flaticon.svg?55414d7bab61eb2ecc88cb4574a9d4f8#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-candidates:before {
+    content: "\f101";
+}
+.flaticon-select:before {
+    content: "\f102";
+}
+.flaticon-hr:before {
+    content: "\f103";
+}
+.flaticon-consulting:before {
+    content: "\f104";
+}
+.flaticon-hr-manager:before {
+    content: "\f105";
+}
+.flaticon-information:before {
+    content: "\f106";
+}
+.flaticon-handshake:before {
+    content: "\f107";
+}
+.flaticon-management:before {
+    content: "\f108";
+}
+.flaticon-worldwide:before {
+    content: "\f109";
+}
+.flaticon-diagram:before {
+    content: "\f10a";
+}
+.flaticon-trend:before {
+    content: "\f10b";
+}

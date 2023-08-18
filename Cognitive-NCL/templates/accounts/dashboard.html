@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Dashboard</title>
+	{% load static %}
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{% static 'otp-assets/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'otp-assets/css/fontawesome-all.css' %}">
+	<link rel="stylesheet" href="{% static 'otp-assets/css/style.css' %}">
+</head>
+<body>
+
+ <!-- Start of popup section
+ 	============================================= -->
+ 	<section id="popup-one" class="popup-one-section">
+ 		<div class="container">
+ 			<div class="popup-wrapper popup-wrapper-style-one">
+ 				<div class="popup-text text-center">
+ 					<h5>Welcome to Corporate Cognitive Assessment</h5>
+ 					<span  style="padding-left: 0px; color: red;">{{error}}</span>
+					<p style="padding-left: 0px;">Please ask Research Assistant for the OTP, enter it in the field below, and click 'Start Assessment'.<br>
+					</p>
+					<form class="form-inner-area" method="GET" action="{% url 'useraccounts:assessment' %}">
+        					<!-- {% csrf_token %} -->
+                        <input type="text" name="OTP" placeholder="Enter OTP Here" required><br>
+                       	
+                       	 <div class="d-grid gap-2 col-6 mx-auto">
+                          <button class="btn btn-primary" type="submit">Start Assessment</button>
+                         
+                        </div>
+                    </form><br>
+                    <!-- <form action="{% url 'useraccounts:logout' %}" method="#">
+                        <div class="d-grid gap-2 col-6 mx-auto">
+                          <button class="btn btn-danger" type="submit">Logout</button>
+                         
+                        </div>
+                    </form> -->
+                  
+ 				
+ 				</div>
+ 				<div class="popup-footer  popup-footer-one">
+ 					<div class="footer-social float-start">
+ 						<a href="https://www.facebook.com/nc.ncai"><img src="{% static 'otp-assets/img/fb.png' %}" alt=""></a>
+ 						<a href="https://www.linkedin.com/company/ned-nclab"><img src="{% static 'otp-assets/img/ln.png' %}" alt=""></a>
+ 						<a href="https://www.youtube.com/channel/UCOyh_A31fD4-hc9xijwS7oA"><img src="{% static 'otp-assets/img/yt.png' %}" alt=""></a>
+ 						<a href="https://nclab.neduet.edu.pk"><img src="{% static 'otp-assets/img/www.png' %}" alt=""></a>
+ 					</div>
+ 					<div class="footer-mail float-end">
+ 						<div class="f-mail-icon">
+ 							<img src="{% static 'otp-assets/img/mi.png' %}" alt="">
+ 						</div>
+ 						<div class="f-mail-text">
+							<a href="mailto: nclab@neduet.edu.pk"><h3>nclab@neduet.edu.pk</h3></a>
+ 							<span>Email us in case of any issues.</span>
+ 						</div>
+ 					</div>
+ 				</div>
+ 			</div>
+ 		</div>
+ 	</section>
+ <!-- End of popup section
+ 	============================================= -->
+
+ 	<script src="{% static 'otp-assets/js/jquery-3.3.1.min.js' %}"></script>
+ 	<script src="{% static 'otp-assets/js/bootstrap.min.js' %}"></script>
+ 	<script src="{% static 'otp-assets/js/main.js' %}"></script>
+ </body>
+ </html>

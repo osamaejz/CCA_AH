@@ -1,0 +1,10 @@
+{% extends "useraccounts/base.html" %}
+{% block body %}
+<h1>Sign Up</h1>
+<form action="{% url 'useraccounts:createuser' %}" method="POST">
+{% csrf_token %}
+{{ form }}
+<input type="submit">
+</form>
+<a href="{% url 'useraccounts:signin' %}">Sign In</a>
+{% endblock %}

@@ -1,0 +1,1741 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CCA</title>
+	{% load static %}
+	<link rel="shortcut icon" href="{% static 'index-assets/img/logo/ncl-logo-small2.png' %}" />
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+     
+	<link rel="stylesheet" href="{% static 'index-assets/css/owl.carousel.css' %}">
+	<link rel="stylesheet" href="{% static 'index-assets/css/fontawesome-all.css' %}">
+	<link rel="stylesheet" href="{% static 'index-assets/css/flaticon.css' %}">
+	<link rel="stylesheet" href="{% static 'index-assets/css/mycollection/flaticon.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'index-assets/css/meanmenu.css' %}">
+	<link rel="stylesheet" href="{% static 'index-assets/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'index-assets/css/video.min.css' %}">
+	<link rel="stylesheet" href="{% static 'index-assets/css/animate.min.css' %}">
+	<link rel="stylesheet" href="{% static 'index-assets/css/lightbox.css' %}">
+	<link rel="stylesheet" href="{% static 'index-assets/css/progess.css' %}">
+	<link rel="stylesheet" href="{% static 'index-assets/css/style.css' %}">
+	<link rel="stylesheet" href="{% static 'index-assets/css/responsive.css' %}">
+
+<style>
+.modal { overflow: auto !important; }</style>
+
+</head>
+
+<body>
+
+	
+  
+
+	<!-- Start of Header section
+		============================================= -->
+		<header class="header_3 gradient-bg">
+			<div class="container">
+				<div class="navbar-default">
+					<div class="navbar-header float-left">
+						<a class="navbar-brand text-uppercase" href="https://nclab.neduet.edu.pk"><img src="{% static 'index-assets/img/logo/ncl-logo-white-small.png' %}" alt="logo"></a>
+					</div><!-- /.navbar-header -->
+					<div class="header-info ul-li">
+						<ul>
+							<li>
+								<div class="mail-phone">
+									<div class="info-icon">
+										<i class="text-gradiant fas fa-envelope"></i>
+									</div>
+									<div class="info-content">
+										<span class="info-id">nclab@neduet.edu.pk</span>
+										<span class="info-text">Email Us For Further Information</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="mail-phone">
+									<div class="info-icon">
+										<i class="text-gradiant fas fa-phone-square"></i>
+									</div>
+									<div class="info-content">
+										<span class="info-id">(021) 99261261</span>
+										<span class="info-text">Call Us For Further Information</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<a href="https://www.facebook.com/nc.ncai">
+									<div class="info-social">
+										<i class="fab fa-facebook-f"></i>
+									</div>
+									<span class="info-text">Facebook</span>
+								</a>
+							</li>
+							<li>
+								<a href="https://www.linkedin.com/company/ned-nclab">
+									<div class="info-social">
+										<i class="fab fa-linkedin"></i>
+									</div>
+									<span class="info-text">LinkedIn</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="nav-menu-4">
+						<div class="login-cart-lang float-right ul-li">
+							<!-- <ul class="search_cart">
+								<li>
+									<div class="cart_search">
+										<a href="#">
+											<i class="fas fa-shopping-bag"></i>
+										</a>
+									</div>
+								</li>
+								<li>
+									<div  class="cart_search">
+										<button type="button" class="toggle-overlay search-btn">
+											<i class="fas fa-search"></i>
+										</button>
+									</div>
+									<div class="search-body">
+										<div class="search-form">
+											<form action="#">
+												<input class="search-input" type="search" placeholder="Search Here">
+												<div class="outer-close toggle-overlay">
+													<button type="button" class="search-close">
+														<i class="fas fa-times"></i>
+													</button>
+												</div>
+											</form>
+										</div>
+									</div>
+								</li>
+							</ul> -->
+							<ul class="lang-login">
+								
+									
+										<!--<div class="login">
+											 <a data-toggle="modal" data-target="#myModal1" href="#">Assessment</a>
+										</div>-->
+										
+									
+								
+								
+            						 <li>
+										<div class="select-lang">
+											<select onchange="location = this.options[this.selectedIndex].value;">
+												<option disabled selected="">Start Assessment</option>
+												<option value="http://127.0.0.1:8000/useraccounts/student/">I am a Student</option>
+												<option value="http://127.0.0.1:8000/useraccounts/employee/">I am an Employee</option>
+											</select>
+										</div>
+									
+								</li>
+								
+								
+								
+							</ul>
+						</div>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<nav class="navbar-menu float-left">
+							<div class="nav-menu ul-li">
+								<ul class="quick-menu">
+									<li><a  href="#slide">Home</a></li>
+									<li><a  href="#popular-course">Workflow</a></li>
+									<li><a  href="#why-choose">Features</a></li>
+									<li><a  href="#about-us">About Us</a></li>
+									<li><a  href="#target-area">target areas</a></li>
+									
+									<li><a  href="#genius-teacher-2">Advisory Board</a></li>
+									
+									<li><a  href="#faq">faq</a></li>
+									
+									<li><a  href="#contact-form">Contact Us</a></li>
+								</ul>
+							</div>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="altranative-header ul-li-block">
+			<div id="menu-container">
+
+				<div class="menu-wrapper">
+					<div class="row">
+
+						<button type="button" class="alt-menu-btn float-left">
+							<span class="hamburger-menu"></span>
+						</button>
+
+						<div class="logo-area">
+							<a href="https://nclab.neduet.edu.pk">
+								<img src="{% static 'index-assets/img/logo/ncl-logo-white-small.png' %}" alt="Logo_not_found">
+							</a>
+						</div>
+
+						<div class="cart-btn pulse  ul-li float-right">
+							<!-- <ul>
+								<li><a href="#"><i class="fas fa-user"></i></a>
+								</li>
+							</ul> -->
+							<ul>
+								
+									<li>
+										<div class="select-lang-2">
+											<select onchange="location = this.options[this.selectedIndex].value;">
+												<option disabled selected="">Start Assessment</option>
+												<option value="http://127.0.0.1:8000/useraccounts/student/">I am a Student</option>
+												<option value="http://127.0.0.1:8000/useraccounts/employee/">I am an Employee</option>
+											</select>
+										</div>
+									
+								</li>
+								
+								
+								
+							</ul>
+							
+							
+						</div>
+
+					</div>
+				</div>
+				  
+
+				<ul class="menu-list accordion" style="left: -100%;">
+					
+					<li class="card">
+									
+						<a class="menu-link" href="slide">Home</a>
+					</li>
+					
+					<li class="card">
+						<a class="menu-link" href="#popular-course">WorkFlow</a>
+					</li>
+					<li class="card">
+						<a class="menu-link" href="#why-choose">Features</a>
+					</li>
+					<li class="card">
+						<a class="menu-link" href="#about-us">About Us</a>
+					</li>
+					<li class="card">
+						<a class="menu-link" href="#target-area">Target Areas</a>
+					</li>
+					<li class="card">
+						<a class="menu-link" href="#genius-teacher-2">Advisory Board</a>
+					</li>
+					<li class="card">
+						<a class="menu-link" href="#faq">FAQs</a>
+					</li>
+					<li class="card">
+						<a class="menu-link" href="#contact-area">Contact Us</a>
+					</li>
+
+				</ul>
+			</div>
+		</div>
+ 	<!-- Start of Header section
+ 		============================================= -->
+
+
+	<!-- Start of slider section
+		============================================= -->
+		<section id="slide" class="slider-section">
+			<div id="slider-item" class="slider-item-details">
+				<div  class="slider-area slider-bg-1 relative-position">
+					<div class="slider-text">
+						<div class="section-title mb20 headline text-center">
+							<div class="layer-1-1">
+								<span class="subtitle text-uppercase">CORPORATE COGNITIVE ASSESSMENT</span>
+							</div>
+							<div class="layer-1-2">
+								<h2 class="secoud-title"> <span>Digital Assessment</span> Tool <br> for <span>Productive Work Place</span></h2>
+							</div>
+							
+						</div>
+						<div class="layer-1-4">
+							<div id="course-btn">
+								<div class="genius-btn  text-center text-uppercase ul-li-block bold-font">
+									<a href="#about-us">About Us<i class="fas fa-caret-right"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="slider-area slider-bg-2 relative-position">
+					<div class="slider-text">
+						<div class="section-title mb20 headline text-center">
+							<div class="layer-1-1">
+								<span class="subtitle text-uppercase">CORPORATE COGNITIVE ASSESSMENT</span>
+							</div>
+							<div class="layer-1-2">
+								<h2 class="secoud-title"> Ensure Work Place <span>Well-being</span></h2>
+							</div>
+						</div>
+						<div class="layer-1-4">
+							<div id="course-btn">
+								<div class="genius-btn  text-center text-uppercase ul-li-block bold-font">
+									<a href="#contact-area">Contact Us<i class="fas fa-caret-right"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="slider-area slider-bg-4 relative-position">
+					<div class="slider-text">
+						<div class="section-title mb20 headline text-center">
+							<span class="subtitle text-uppercase">CORPORATE COGNITIVE ASSESSMENT</span>
+							<h2 class="secoud-title"><span>Rapid Assessment</span> with <br> <span>Reliable Outcomes</span></h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	<!-- End of slider section
+		============================================= -->
+
+
+	<!-- Start of Search Courses
+		============================================= -->
+		<section id="search-course" class="search-course-section search-course-third">
+			<div class="container">
+				<div class="search-counter-up">
+					<div class="version-four">
+						<div class="row">
+							<div class="col-md-3">
+								<div class="counter-icon-number">
+									<div class="counter-icon">
+										<i class="text-gradiant flaticon-graduation-hat"></i>
+									</div>
+									<div class="counter-number">
+										<span class="counter-count bold-font">56 </span><span></span>
+										<p>Tests Taken</p>
+									</div>
+								</div>
+							</div>
+							<!-- /counter -->
+
+							<div class="col-md-3">
+								<div class="counter-icon-number">
+									<div class="counter-icon">
+										<i class="text-gradiant flaticon-book"></i>
+									</div>
+									<div class="counter-number">
+										<span class="counter-count bold-font">36</span><span></span>
+										<p>Reports Generated</p>
+									</div>
+								</div>
+							</div>
+							<!-- /counter -->
+
+							<div class="col-md-3">
+								<div class="counter-icon-number">
+									<div class="counter-icon">
+										<i class="text-gradiant flaticon-favorites-button"></i>
+									</div>
+									<div class="counter-number">
+										<span class="counter-count bold-font">3</span><span></span>
+										<p>Activities Available</p>
+									</div>
+								</div>
+							</div>
+							<!-- /counter -->
+
+							<div class="col-md-3">
+								<div class="counter-icon-number">
+									<div class="counter-icon">
+										<i class="text-gradiant flaticon-group"></i>
+									</div>
+									<div class="counter-number">
+										<span class="counter-count bold-font">43</span><span></span>
+										<p>Users Registered</p>
+									</div>
+								</div>
+							</div>
+							<!-- /counter -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	<!-- End of Search Courses
+		============================================= -->
+
+
+	<!-- Start popular course
+		============================================= -->
+		<section id="popular-course" class="popular-course-section popular-three">
+			<div class="container">
+				<div class="section-title mb20 headline text-left">
+					<span class="subtitle text-uppercase">COGNITIVE ASSESSMENT</span>
+					<h2><span>How CCA</span> Works</h2>
+				</div>
+				<div class="row">
+					<div class="col course-item-pic-text">
+						<div class="course-pic relative-position mb25">
+							<img src="{% static 'index-assets/img/course/1.png' %}" alt="">
+							
+						</div>
+						<div class="course-item-text">
+							
+							<div class="course-title mt10 headline relative-position">
+								<h3>Computer based assessment done by user </h3>
+							</div>
+							<div class="course-viewer ul-li">
+								The evaluation consists of a series of cognitive and mental health tests. The user can take this assessment on their own without any prior training.
+							</div>
+						</div>
+					</div>
+					<!-- /item -->
+					<div class="col course-item-pic-text">
+						<div class="course-pic relative-position mb25">
+							<img src="{% static 'index-assets/img/course/3.png' %}" alt="">
+							
+						</div>
+						<div class="course-item-text">
+							
+							<div class="course-title mt10 headline relative-position">
+								<h3>Analysis of responses and computation of scores</h3>
+							</div>
+							<div class="course-viewer ul-li">
+								The inputs are processed, the tests are scored, and the results are compared to healthy standards using smart cloud-based software. The developed algorithms then evaluate the findings and map them onto cognitive domains to produce a competency matrix.
+							</div>
+						</div>
+					</div>
+					<!-- /item -->
+					<div class="col course-item-pic-text">
+						<div class="course-pic relative-position mb25">
+							<img src="{% static 'index-assets/img/course/2.png' %}" alt="">
+							
+						</div>
+						<div class="course-item-text">
+							
+							<div class="course-title mt10 headline relative-position">
+								<h3>Display of results</h3>
+							</div>
+							<div class="course-viewer ul-li">
+								A summary report describing the user’s competency will be presented to user. 
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	<!-- End popular course
+		============================================= -->
+
+
+	<!-- Start why choose section
+		============================================= -->
+		<section id="why-choose" class="why-choose-section version-four backgroud-style">
+			<div class="container">
+				<div class="section-title mb20 headline text-center">
+					<span class="subtitle text-uppercase">CCA FEATURES AND BENEFITS</span>
+					<h2>Reason <span>Why Choose CCA</span></h2>
+				</div>
+				<div class="extra-features-content">
+					<div class="row">
+						<div class="col-md-4 col-sm-6">
+							<div class="extra-left">
+								<div class="extra-left-content">
+									<div class="extra-icon-text text-left">
+										<div class="features-icon gradient-bg text-center">
+											<i class="flaticon-maths-class-materials-cross-of-a-pencil-and-a-ruler"></i>
+											<div class="feat-tag">
+												<span>01</span>
+											</div>
+										</div>
+										<div class="features-text">
+											<div class="features-text-title">
+												<h3>Comprehensive screening</h3>
+											</div>
+											<div class="features-text-dec">
+												<span>Assesses attention, meditation, memory, work stress, well-being, life satisfaction, executive functions, and information processing speed. </span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- // extra-left-content --> 
+
+								<div class="extra-left-content">
+									<div class="extra-icon-text">
+										<div class="features-icon gradient-bg text-center">
+											<i class=" flaticon-clipboard-with-pencil"></i>
+											<div class="feat-tag">
+												<span>02</span>
+											</div>
+										</div>
+										<div class="features-text pt25">
+											<div class="features-text-title">
+												<h3>Precise and instant measurement</h3>
+											</div>
+											<div class="features-text-dec">
+												<span>Allows rapid assessment while maintaining the measurement accuracy of the parameters of interest.</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- // extra-left-content -->
+
+								<div class="extra-left-content">
+									<div class="extra-icon-text">
+										<div class="features-icon gradient-bg text-center">
+											<i class="flaticon-list"></i>
+											<div class="feat-tag">
+												<span>03</span>
+											</div>
+										</div>
+										<div class="features-text pt25">
+											<div class="features-text-title">
+												<h3>Easy to use </h3>
+											</div>
+											<div class="features-text-dec">
+												<span>A user-friendly interface eliminates the need of any prior training to undertake this assessment. Simple on-screen instructions make it easy for the users.</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- // extra-left-content -->
+							</div><!-- /extra-left -->
+						</div>
+						<!-- /col-sm-3 -->
+
+						<div class="col-sm-4">
+							<div class="extra-pic text-center">
+								<img src="{% static 'index-assets/img/banner/wc-2.png' %}" alt="img">
+							</div>
+						</div>
+						<!-- /col-sm-6 -->
+
+						<div class="col-md-4 col-sm-6">
+							<div class="extra-right">
+								<div class="extra-left-content">
+									<div class="extra-icon-text text-right">
+										<div class="features-icon gradient-bg text-center">
+											<i class="flaticon-ruler-and-pencil"></i>
+											<div class="feat-tag">
+												<span>04</span>
+											</div>
+										</div>
+										<div class="features-text pt25">
+											<div class="features-text-title text-right pb10">
+												<h3>Authentication</h3>
+											</div>
+											<div class="features-text-dec text-right">
+												<span>It employs standardize tools adopted by well recognized international regulatory bodies to evaluate cognitive skills and mental health.</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- // extra-left-content -->
+
+								<div class="extra-left-content">
+									<div class="extra-icon-text text-right">
+										<div class="features-icon gradient-bg text-center">
+											<i class="flaticon-clipboards"></i>
+											<div class="feat-tag">
+												<span>05</span>
+											</div>
+										</div>
+										<div class="features-text pt25">
+											<div class="features-text-title text-right pb10">
+												<h3>Data accuracy and integrity </h3>
+											</div>
+											<div class="features-text-dec text-right">
+												<span>Automatically generates a PDF-formatted score sheet, reducing the probability of computational errors and save time. The complete profile will include both qualitative and quantitative measures.</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- // extra-left-content -->
+
+								<div class="extra-left-content">
+									<div class="extra-icon-text text-right">
+										<div class="features-icon gradient-bg text-center">
+											<i class="flaticon-pie-chart"></i>
+											<div class="feat-tag">
+												<span>06</span>
+											</div>
+										</div>
+										<div class="features-text pt25">
+											<div class="features-text-title text-right pb10">
+												<h3>Consistency of CCA </h3>
+											</div>
+											<div class="features-text-dec text-right">
+												<span>Automated system reduces the likelihood of errors along with the elimination of unintended bias.</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- // extra-left-content -->
+							</div><!-- /extra-left -->
+						</div>
+						<!-- /col-sm-3 -->
+					</div><!-- /row -->
+				</div>
+			</div>
+		</section>
+	<!-- End why choose section
+		============================================= -->
+
+
+	<!-- Start of about us section
+		============================================= -->
+		<section id="about-us" class="about-us-section home-secound home-third">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-5">
+						<div class="about-resigter-form backgroud-style relative-position">
+							<div class="register-content">
+								
+								<div class="register-form-area">
+									
+								</div>
+							</div>
+						</div>
+						
+					</div>
+					<!-- /form -->
+
+					<div class="col-md-7">
+						<div class="about-us-text">
+							<div class="section-title relative-position mb20 headline text-left">
+								<span class="subtitle ml42 text-uppercase">ABOUT US</span>
+								<h2>Welcome to <span>CCA</span>
+								- Corporate Cognitive Assessment</h2>
+								<p> A digital cognitive assessment tool, developed by Neurocomputation Laboratory, National Center of Artificial Intelligence, Pakistan, that offers cognitive profiling, along with the identification of brain patterns activated during cognitive tasks in order to better discern intellectual capabilities, and provide customized action plan empowering the individuals to deliver their full potential.</p>
+							</div>
+							<div class="about-content-text">
+								<!-- <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam volutpat. Ut wisi enim ad minim veniam. magna aliquam volutpat. Ut wisi enim ad minim veniam.</p>
+								<div class="about-list mb65 ul-li-block">
+									<ul>
+										<li>Professional And Experienced Since 1980</li>
+										<li>We Connect Learners To The Best  Universities From Around The World</li>
+										<li>Our Mission Increasing Global Access To Quality Aducation</li>
+										<li>100K Online Available Courses</li>
+									</ul>
+								</div> -->
+								<div class="about-btn">
+									<div class="genius-btn gradient-bg text-center text-uppercase ul-li-block bold-font">
+										<a href="https://nclab.neduet.edu.pk">About Us <i class="fas fa-caret-right"></i></a>
+									</div>
+									<div class="genius-btn gradient-bg text-center text-uppercase ul-li-block bold-font">
+										<a href="#contact-area">contact us <i class="fas fa-caret-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	<!-- End of about us section
+		============================================= -->
+
+
+	<!-- Start of best course
+		============================================= -->
+		<!-- <section id="best-course" class="best-course-section">
+			<div class="container">
+				<div class="section-title mb45 headline text-center">
+					<span class="subtitle text-uppercase">SEARCH OUR COURSES</span>
+					<h2>Browse Our<span> Best Course.</span></h2>
+				</div>
+				<div class="best-course-area mb45">
+					<div class="row">
+						<div class="col-md-3">
+							<div class="best-course-pic-text relative-position">
+								<div class="best-course-pic relative-position">
+									<img src="{% static 'index-assets/img/course/bc-1.jpg" alt="">
+									<div class="trend-badge-2 text-center text-uppercase">
+										<i class="fas fa-bolt"></i>
+										<span>Trending</span>
+									</div>
+									<div class="course-price text-center gradient-bg">
+										<span>$99.00</span>
+									</div>
+									<div class="course-rate ul-li">
+										<ul>
+											<li><i class="fas fa-star"></i></li>
+											<li><i class="fas fa-star"></i></li>
+											<li><i class="fas fa-star"></i></li>
+											<li><i class="fas fa-star"></i></li>
+											<li><i class="fas fa-star"></i></li>
+										</ul>
+									</div>
+									<div class="course-details-btn">
+										<a href="#">COURSE DETAIL <i class="fas fa-arrow-right"></i></a>
+									</div>
+									<div class="blakish-overlay"></div>
+								</div>
+								<div class="best-course-text">
+									<div class="course-title mb20 headline relative-position">
+										<h3><a href="#">Fully Responsive Web Design &amp; Development.</a></h3>
+									</div>
+									<div class="course-meta">
+										<span class="course-category"><a href="#">Web Design</a></span>
+										<span class="course-author"><a href="#">250 Students</a></span>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-3">
+							<div class="best-course-pic-text relative-position">
+								<div class="best-course-pic relative-position">
+									<img src="{% static 'index-assets/img/course/bc-2.jpg' %}" alt="">
+									<div class="course-price text-center gradient-bg">
+										<span>$99.00</span>
+									</div>
+									<div class="course-rate ul-li">
+										<ul>
+											<li><i class="fas fa-star"></i></li>
+											<li><i class="fas fa-star"></i></li>
+											<li><i class="fas fa-star"></i></li>
+											<li><i class="fas fa-star"></i></li>
+											<li><i class="fas fa-star"></i></li>
+										</ul>
+									</div>
+									<div class="course-details-btn">
+										<a href="#">COURSE DETAIL <i class="fas fa-arrow-right"></i></a>
+									</div>
+									<div class="blakish-overlay"></div>
+								</div>
+								<div class="best-course-text">
+									<div class="course-title mb20 headline relative-position">
+										<h3><a href="#">Fully Responsive Web Design &amp; Development.</a></h3>
+									</div>
+									<div class="course-meta">
+										<span class="course-category"><a href="#">Web Design</a></span>
+										<span class="course-author"><a href="#">250 Students</a></span>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-3">
+							<div class="best-course-pic-text relative-position">
+								<div class="best-course-pic relative-position">
+									<img src="{% static 'index-assets/img/course/bc-3.jpg' %}" alt="">
+									<div class="course-price text-center gradient-bg">
+										<span>$99.00</span>
+									</div>
+									<div class="course-rate ul-li">
+										<ul>
+											<li><i class="fas fa-star"></i></li>
+											<li><i class="fas fa-star"></i></li>
+											<li><i class="fas fa-star"></i></li>
+											<li><i class="fas fa-star"></i></li>
+											<li><i class="fas fa-star"></i></li>
+										</ul>
+									</div>
+									<div class="course-details-btn">
+										<a href="#">COURSE DETAIL <i class="fas fa-arrow-right"></i></a>
+									</div>
+									<div class="blakish-overlay"></div>
+								</div>
+								<div class="best-course-text">
+									<div class="course-title mb20 headline relative-position">
+										<h3><a href="#">Fully Responsive Web Design &amp; Development.</a></h3>
+									</div>
+									<div class="course-meta">
+										<span class="course-category"><a href="#">Web Design</a></span>
+										<span class="course-author"><a href="#">250 Students</a></span>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-3">
+							<div class="best-course-pic-text relative-position">
+								<div class="best-course-pic relative-position">
+									<img src="{% static 'index-assets/img/course/bc-4.jpg' %}" alt="">
+									<div class="course-price text-center gradient-bg">
+										<span>$99.00</span>
+									</div>
+									<div class="course-rate ul-li">
+										<ul>
+											<li><i class="fas fa-star"></i></li>
+											<li><i class="fas fa-star"></i></li>
+											<li><i class="fas fa-star"></i></li>
+											<li><i class="fas fa-star"></i></li>
+											<li><i class="fas fa-star"></i></li>
+										</ul>
+									</div>
+									<div class="course-details-btn">
+										<a href="#">COURSE DETAIL <i class="fas fa-arrow-right"></i></a>
+									</div>
+									<div class="blakish-overlay"></div>
+								</div>
+								<div class="best-course-text">
+									<div class="course-title mb20 headline relative-position">
+										<h3><a href="#">Fully Responsive Web Design &amp; Development.</a></h3>
+									</div>
+									<div class="course-meta">
+										<span class="course-category"><a href="#">Web Design</a></span>
+										<span class="course-author"><a href="#">250 Students</a></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</section> -->
+		<section id="target-area" class="best-course-section">
+		<div class="section-title mb45 headline text-center">
+			<span class="subtitle text-uppercase">CCA BENEFITS INDUSTRIES</span>
+			<h2>Our<span> Target Industries</span></h2>
+		</div>
+		<div class="about-course-categori one-page-category about-teacher-2">
+			<div class="container">
+				<div class="category-slide text-center">
+					<div class="category-icon-title text-center">
+						<div class="category-icon">
+							<i class="text-gradiant flaticon-technology"></i>
+						</div>
+						<div class="category-title">
+							<h4>Executives</h4>
+						</div>
+					</div>
+
+					<div class="category-icon-title text-center">
+						<div class="category-icon">
+							<i class="text-gradiant flaticon-select"></i>
+						</div>
+						<div class="category-title">
+							<h4>Sales Team</h4>
+						</div>
+					</div>
+
+					<div class="category-icon-title text-center">
+						<div class="category-icon">
+							<i class="text-gradiant flaticon-candidates"></i>
+						</div>
+						<div class="category-title">
+							<h4>HR Department</h4>
+						</div>
+					</div>
+
+					<div class="category-icon-title text-center">
+						<div class="category-icon">
+							<i class="text-gradiant flaticon-business"></i>
+						</div>
+						<div class="category-title">
+							<h4>Managerial Staff</h4>
+						</div>
+					</div>
+
+					<div class="category-icon-title text-center">
+						<div class="category-icon">
+							<i class="text-gradiant flaticon-dna"></i>
+						</div>
+						<div class="category-title">
+							<h4>Marketing Team</h4>
+						</div>
+					</div>
+
+					<div class="category-icon-title text-center">
+						<div class="category-icon">
+							<i class="text-gradiant flaticon-worldwide"></i>
+						</div>
+						<div class="category-title">
+							<h4>Financial Staff</h4>
+						</div>
+					</div>
+
+					<div class="category-icon-title text-center">
+						<div class="category-icon">
+							<i class="text-gradiant flaticon-hr"></i>
+						</div>
+						<div class="category-title">
+							<h4>Bankers</h4>
+						</div>
+					</div>
+
+					<div class="category-icon-title text-center">
+						<div class="category-icon">
+							<i class="text-gradiant flaticon-consulting"></i>
+						</div>
+						<div class="category-title">
+							<h4>Accountants</h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</section>
+		<!-- /course-categori -->
+	<!-- End of best course
+		============================================= -->
+	<!-- Start of target areas
+		============================================= -->
+		<section id="about-page" class="about-page-section">
+			<div class="section-title mb45 headline text-center">
+				<span class="subtitle text-uppercase">CCA ASSESS MENTAL HEALTH</span>
+				<h2>Our<span> Application Areas</span></h2>
+			</div>
+			<div class="container">
+				
+				<div class="about-us-content-item">
+							
+							<div class="course-teacher about-teacher-2">
+								<div class="about-teacher-2">
+									
+									<div class="row service-slide_33">
+										<div class="col-3 service-text-icon">
+											<div class="service-icon float-left">
+												<i class="text-gradiant flaticon-maths-class-materials-cross-of-a-pencil-and-a-ruler"></i>
+											</div>
+											<div class="service-text">
+												<h3 class="bold-font">Information Processing</h3>
+												<!-- <p>Lorem ipsum dolor sit amet consectuerer adipiscing elit set diam nonnumynibh.</p> -->
+											</div>
+										</div>
+										<div class="col-3 service-text-icon">
+											<div class="service-icon float-left">
+												<i class="text-gradiant flaticon-clipboard-with-pencil"></i>
+											</div>
+											<div class="service-text">
+												<h3 class="bold-font">Executive Functions</h3>
+												<!-- <p>Lorem ipsum dolor sit amet consectuerer adipiscing elit set diam nonnumynibh.</p> -->
+											</div>
+										</div>
+										<div class="col-3 service-text-icon">
+											<div class="service-icon float-left">
+												<i class="text-gradiant flaticon-list"></i>
+											</div>
+											<div class="service-text">
+												<h3 class="bold-font">Mental Well-being</h3>
+												<!-- <p>Lorem ipsum dolor sit amet consectuerer adipiscing elit set diam nonnumynibh.</p> -->
+											</div>
+										</div>
+										<div class="col-3 service-text-icon">
+											<div class="service-icon float-left">
+												<i class="text-gradiant flaticon-maths-class-materials-cross-of-a-pencil-and-a-ruler"></i>
+											</div>
+											<div class="service-text">
+												<h3 class="bold-font">Work Stress</h3>
+												<!-- <p>Lorem ipsum dolor sit amet consectuerer adipiscing elit set diam nonnumynibh.</p> -->
+											</div>
+										</div>
+										<div class="col-3 service-text-icon">
+											<div class="service-icon float-left">
+												<i class="text-gradiant flaticon-clipboard-with-pencil"></i>
+											</div>
+											<div class="service-text">
+												<h3 class="bold-font">Sleep Quality</h3>
+												<!-- <p>Lorem ipsum dolor sit amet consectuerer adipiscing elit set diam nonnumynibh.</p> -->
+											</div>
+										</div>
+										<div class="col-3 service-text-icon">
+											<div class="service-icon float-left">
+												<i class="text-gradiant flaticon-list"></i>
+											</div>
+											<div class="service-text">
+												<h3 class="bold-font">Reaction Time</h3>
+												<!-- <p>Lorem ipsum dolor sit amet consectuerer adipiscing elit set diam nonnumynibh.</p> -->
+											</div>
+										</div>
+										<div class="col-3 service-text-icon">
+											<div class="service-icon float-left">
+												<i class="text-gradiant flaticon-maths-class-materials-cross-of-a-pencil-and-a-ruler"></i>
+											</div>
+											<div class="service-text">
+												<h3 class="bold-font">Attention</h3>
+												<!-- <p>Lorem ipsum dolor sit amet consectuerer adipiscing elit set diam nonnumynibh.</p> -->
+											</div>
+										</div>
+										<div class="col-3 service-text-icon">
+											<div class="service-icon float-left">
+												<i class="text-gradiant flaticon-clipboard-with-pencil"></i>
+											</div>
+											<div class="service-text">
+												<h3 class="bold-font">Life Satisfaction</h3>
+												<!-- <p>Lorem ipsum dolor sit amet consectuerer adipiscing elit set diam nonnumynibh.</p> -->
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- /course-advantage -->
+
+							</div>
+				</div>
+					
+			</div>
+		</section>
+	<!-- Start of genius teacher v2
+		============================================= -->
+		<section id="genius-teacher-2" class="genius-teacher-section-2 one-page-teacher backgroud-style">
+			<div class="container">
+				<div class="section-title mb20  headline text-center">
+					<span class="subtitle text-uppercase">Meet The Board Members</span>
+					<h2><span>Advisory</span> Board</h2>
+				</div>
+				<div class="row">
+					
+
+					<div class="col teacher-double">
+						<div class="teacher-img-content relative-position">
+							<img src="{% static 'index-assets/img/advisory/1.png' %}" alt="">
+							<div class="teacher-cntent">
+								<div class="teacher-social-name ul-li-block">
+									<ul>
+										<li><a href="https://www.linkedin.com/in/saadqazi/"><i class="fab fa-linkedin"></i></a></li>
+										<li><a href="mailto: saadqazi@neduet.edu.pk"><i class="fa fa-envelope"></i></a></li>
+									</ul>
+									
+								</div>
+							</div>
+							
+						</div>
+
+						<div class="teacher">
+							<p>Prof. Dr. Saad Ahmed Qazi</p>
+							<span>PI Neurocomputation Lab,<br>
+								Dean ECE, 
+								NED University of Engineeing & Technology
+								
+							</span>
+						</div>
+						
+					</div>
+
+					<div class="col teacher-double">
+						<div class="teacher-img-content relative-position">
+							<img src="{% static 'index-assets/img/advisory/2.png' %}" alt="">
+							<div class="teacher-cntent">
+								<div class="teacher-social-name ul-li-block">
+									<ul>
+										<li><a href="https://linkedin.com/in/abul-hasan-6830b01a"><i class="fab fa-linkedin"></i></a></li>
+										<li><a href="mailto: abulhasan@neduet.edu.pk"><i class="fa fa-envelope"></i></a></li>
+										
+									</ul>
+									
+								</div>
+							</div>
+							
+						</div>
+
+						<div class="teacher">
+							<p>Dr. Muhammad Abul Hasan</p>
+							<span>Co-PI Neurocomputation Lab <br>
+								PhD in Neurofeedback and 
+								Pain Management
+							</span>
+						</div>
+					</div>
+					<div class="col teacher-double">
+						<div class="teacher-img-content relative-position">
+							<img src="{% static 'index-assets/img/advisory/6.png' %}" alt="">
+							<div class="teacher-cntent">
+								<div class="teacher-social-name ul-li-block">
+									<ul>
+										<li><a href="https://www.linkedin.com/in/lampros-stergioulas-018335"><i class="fab fa-linkedin"></i></a></li>
+										<li><a href="mailto:l.stergioulas@hhs.nl"><i class="fa fa-envelope"></i></a></li>
+										
+									</ul>
+									
+								</div>
+							</div>
+						
+						</div>
+						<div class="teacher">
+							<p>Dr. Lampros Stergioulas</p>
+							<span>Professor in Business Analytics <br>
+								Surrey Business School, University of Surrey
+							</span>
+						</div>
+					</div>
+					<!-- <div class="col teacher-double">
+						<div class="teacher-img-content relative-position">
+							<img src="{% static 'index-assets/img/advisory/3.png' %}" alt="">
+							<div class="teacher-cntent">
+								<div class="teacher-social-name ul-li-block">
+									<ul>
+										<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+										<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+										<li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+									</ul>
+									
+								</div>
+							</div>
+						
+						</div>
+						<div class="teacher">
+							<p>Dr. Sobia Aftab</p>
+							<span>Clinical Psychologist, <br>
+								Institute of Clinical Psychology, University of Karachi
+							</span>
+						</div>
+					</div> -->
+					<div class="col teacher-double">
+						<div class="teacher-img-content relative-position">
+							<img src="{% static 'index-assets/img/advisory/4.png' %}" alt="">
+							<div class="teacher-cntent">
+								<div class="teacher-social-name ul-li-block">
+									<ul>
+										<li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+										<li><a href="#"><i class="fa fa-envelope"></i></a></li>
+									</ul>
+									
+								</div>
+							</div>
+							
+						</div>
+						<div class="teacher">
+							<p>Shakoor Mahar</p>
+							<span>Consultant Psychologist <br>
+								Al-Shakoor Foundation,
+								Karachi
+							</span>
+						</div>
+					</div>
+
+					<!-- <div class="col teacher-double">
+						<div class="teacher-img-content relative-position">
+							<img src="{% static 'index-assets/img/advisory/5.png' %}" alt="">
+							<div class="teacher-cntent">
+								<div class="teacher-social-name ul-li-block">
+									<ul>
+										<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+										<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+										<li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+									</ul>
+									
+								</div>
+							</div>
+							
+							
+						</div>
+						<div class="teacher">
+							<p>Dr. Muhammad Adeel Parvaz 
+							</p>
+							<span>Principal Investigator & Director MPLAB,<br>
+								Icahn School of Medicine at 
+								Mount Sinai</span>
+						</div>
+					</div> -->
+
+				</div>
+			</div>
+		</section>
+	<!-- End of genius teacher v2
+		============================================= -->
+
+
+
+
+
+	<!-- Start of sponsor section
+		============================================= -->
+		<section id="sponsor" class="sponsor-section">
+			<div class="container">
+				<div class="section-title-2 mt60 mb65 headline text-left">
+					<h2>CCA <span>Partners</span></h2>
+				</div>
+				<div class="row sponsor-1">
+					<!-- <div class="col sponsor-pic text-center">
+						<img src="{% static 'index-assets/img/sponsor/1.png' %}" alt="">
+					</div> -->
+					<div class="col sponsor-pic text-center">
+						<img src="{% static 'index-assets/img/sponsor/2.png' %}" alt="">
+					</div>
+					<div class="col sponsor-pic text-center">
+						<img src="{% static 'index-assets/img/sponsor/3.png' %}" alt="">
+					</div>
+					<div class="col sponsor-pic text-center">
+						<img src="{% static 'index-assets/img/sponsor/4.png' %}" alt="">
+					</div>
+					<!-- <div class="col sponsor-pic text-center">
+						<img src="{% static 'index-assets/img/sponsor/5.png' %}" alt="">
+					</div> -->
+					<div class="col sponsor-pic text-center">
+						<img src="{% static 'index-assets/img/sponsor/6.png' %}" alt="">
+					</div>
+				</div>
+				<div class="section-title-2 mt60 mb65 headline text-left">
+					<h2>References</h2>
+				</div>
+				<div class="app-details-content">
+					<div class="about-list mb30 ul-li-block">
+						<ul>
+							<li>Based on normative data collected from healthy Pakistani volunteers (N=91) under the age of 30, 2021. <span class='ref'>&nbsp;&nbsp; Under Review at PLOS One</span></li>
+							<li>Impact of COVID-19 on Depression, Anxiety and Stress Symptoms in Pakistani Nationals, Neurocomputation Laboratory Survey, 2020. <span class='ref'>&nbsp;&nbsp;  Under Review at PLOS One</span></li>
+							<li>M. Banjongrewadee, N. Wongpakaran, T. Wongpakaran, T. Pipanmekaporn, Y. Punjasawadwong, and S. Mueankwan, The role of perceived stress and cognitive function on the relationship between neuroticism and depression among the elderly: A structural equation model approach, 2020. <a href="https://bmcpsychiatry.biomedcentral.com/articles/10.1186/s12888-020-2440-9" target="_blank"><span class='ref'>&nbsp;&nbsp; Link</span></a></li>
+							<li>A. S. Keller, J. E. Leikauf, B. Holt-Gosselin, B. R. Staveland, and L. M. Williams, Paying attention to attention in depression, 2019. <a href="https://www.nature.com/articles/s41398-019-0616-1" target="_blank"><span class='ref'>&nbsp;&nbsp; Link</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+	<!-- End of sponsor section
+		============================================= -->
+
+	<!-- Start FAQ section
+		=============================================
+		<section id="faq" class="faq-section faq-secound-home-version backgroud-style">
+			<div class="container">
+				<div class="section-title mb45 headline text-center">
+					<span class="subtitle text-uppercase">CCA FAQ</span>
+					<h2>Frequently<span> Ask & Questions</span></h2>
+				</div>
+
+				<div class="faq-tab mb65">
+					<div class="faq-tab-ques  ul-li">
+						<div class="tab-button text-center mb65">
+							<ul class="product-tab">
+								<li class="active" rel="tab1">GENERAL </li>
+								<li rel="tab2"> ASSESSMENT </li>
+								<li rel="tab3"> REPORTS </li>
+								<li rel="tab4"> TECHNICAL  </li>
+								<li rel="tab5">  OTHERS  </li>
+							</ul>
+						</div>
+					
+						<div class="tab-container">
+
+							
+							<div id="tab1" class="tab-content-1 pt35">
+								<div id="accordion" class="panel-group">
+									<div class="panel">
+										<div class="panel-title" id="headingOne">
+											<h3 class="mb-0">
+												<button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+													How to Register or Make An Account in CCA?
+												</button>
+											</h3>
+										</div>
+										<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+											<div class="panel-body">
+												Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam volutpat. Ut wisi enim ad minim veniam consectetuer adipiscing elit, sed diam nonummy.
+											</div>
+										</div>
+									</div>
+									<div class="panel">
+										<div class="panel-title" id="headingTwo">
+											<h3 class="mb-0">
+												<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+													What is CCA?
+												</button>
+											</h3>
+										</div>
+										<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+											<div class="panel-body">
+												Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam volutpat. Ut wisi enim ad minim veniam consectetuer adipiscing elit, sed diam nonummy.
+											</div>
+										</div>
+									</div>
+									<div class="panel">
+										<div class="panel-title" id="headingThree">
+											<h3 class="mb-0">
+												<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+													What Lorem Ipsum Dolor Sit Amet Consectuerer?
+												</button>
+											</h3>
+										</div>
+										<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+											<div class="panel-body">
+												Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam volutpat. Ut wisi enim ad minim veniam consectetuer adipiscing elit, sed diam nonummy.
+											</div>
+										</div>
+									</div>
+									<div class="panel">
+										<div class="panel-title" id="headingFoure">
+											<h3 class="mb-0">
+												<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFoure" aria-expanded="false" aria-controls="collapseFoure">
+													Adipiscing Diamet Nonnumy Nibh Euismod?
+												</button>
+											</h3>
+										</div>
+										<div id="collapseFoure" class="collapse" data-parent="#accordion">
+											<div class="panel-body">
+												Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam volutpat. Ut wisi enim ad minim veniam consectetuer adipiscing elit, sed diam nonummy.
+											</div>
+										</div>
+									</div>
+								</div>
+								
+
+							</div>
+							
+
+							<div id="tab2" class="tab-content-1 pt35">
+								<div id="accordion-2" class="panel-group">
+									<div class="panel">
+										<div class="panel-title" id="headingSix">
+											<h3 class="mb-0">
+												<button class="btn btn-link" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+													How to Register or Make An Account in CCA?
+												</button>
+											</h3>
+										</div>
+										<div id="collapseSix" class="collapse show" aria-labelledby="headingSix" data-parent="#accordion-2">
+											<div class="panel-body">
+												Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam volutpat. Ut wisi enim ad minim veniam consectetuer adipiscing elit, sed diam nonummy.
+											</div>
+										</div>
+									</div>
+									<div class="panel">
+										<div class="panel-title" id="headingSeven">
+											<h3 class="mb-0">
+												<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+													What is CCA?
+												</button>
+											</h3>
+										</div>
+										<div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion-2">
+											<div class="panel-body">
+												Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam volutpat. Ut wisi enim ad minim veniam consectetuer adipiscing elit, sed diam nonummy.
+											</div>
+										</div>
+									</div>
+									<div class="panel">
+										<div class="panel-title" id="headingEight">
+											<h3 class="mb-0">
+												<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+													What Lorem Ipsum Dolor Sit Amet Consectuerer?
+												</button>
+											</h3>
+										</div>
+										<div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion-2">
+											<div class="panel-body">
+												Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam volutpat. Ut wisi enim ad minim veniam consectetuer adipiscing elit, sed diam nonummy.
+											</div>
+										</div>
+									</div>
+									<div class="panel">
+										<div class="panel-title" id="headingNine">
+											<h3 class="mb-0">
+												<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+													Adipiscing Diamet Nonnumy Nibh Euismod?
+												</button>
+											</h3>
+										</div>
+										<div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordion-2">
+											<div class="panel-body">
+												Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam volutpat. Ut wisi enim ad minim veniam consectetuer adipiscing elit, sed diam nonummy.
+											</div>
+										</div>
+									</div>
+								</div>
+							
+							</div>
+						
+
+							<div id="tab3" class="tab-content-1 pt35">
+								<div class="row">
+									<div class="col-md-6">
+										<div class="ques-ans mb45 headline">
+											<h3> What is CCA?</h3>
+											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam volutpat. Ut wisi enim ad minim veniam.</p>
+										</div>
+
+										<div class="ques-ans mb45 headline">
+											<h3> What Lorem Ipsum Dolor Sit Amet Consectuerer?</h3>
+											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam volutpat. Ut wisi enim ad minim veniam.</p>
+										</div>
+									</div>
+
+									<div class="col-md-6">
+										<div class="ques-ans mb45 headline">
+											<h3> How to Register or Make An Account in Genius?</h3>
+											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam volutpat. Ut wisi enim ad minim veniam.</p>
+										</div>
+
+										<div class="ques-ans mb45 headline">
+											<h3> Adipiscing Diamet Nonnumy Nibh Euismod?</h3>
+											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam volutpat. Ut wisi enim ad minim veniam.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						
+
+							<div id="tab4" class="tab-content-1 pt35">
+								<div class="row">
+									<div class="col-md-6">
+										<div class="ques-ans mb45 headline">
+											<h3> What is CCA?</h3>
+											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam volutpat. Ut wisi enim ad minim veniam.</p>
+										</div>
+
+										<div class="ques-ans mb45 headline">
+											<h3> What Lorem Ipsum Dolor Sit Amet Consectuerer?</h3>
+											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam volutpat. Ut wisi enim ad minim veniam.</p>
+										</div>
+									</div>
+
+									<div class="col-md-6">
+										<div class="ques-ans mb45 headline">
+											<h3> How to Register or Make An Account in Genius?</h3>
+											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam volutpat. Ut wisi enim ad minim veniam.</p>
+										</div>
+
+										<div class="ques-ans mb45 headline">
+											<h3> Adipiscing Diamet Nonnumy Nibh Euismod?</h3>
+											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam volutpat. Ut wisi enim ad minim veniam.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+
+							<div id="tab5" class="tab-content-1 pt35">
+								<div class="row">
+									<div class="col-md-6">
+										<div class="ques-ans mb45 headline">
+											<h3> What is Genius Courses?</h3>
+											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam volutpat. Ut wisi enim ad minim veniam.</p>
+										</div>
+
+										<div class="ques-ans mb45 headline">
+											<h3> What Lorem Ipsum Dolor Sit Amet Consectuerer?</h3>
+											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam volutpat. Ut wisi enim ad minim veniam.</p>
+										</div>
+									</div>
+
+									<div class="col-md-6">
+										<div class="ques-ans mb45 headline">
+											<h3> How to Register or Make An Account in Genius?</h3>
+											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam volutpat. Ut wisi enim ad minim veniam.</p>
+										</div>
+
+										<div class="ques-ans mb45 headline">
+											<h3> Adipiscing Diamet Nonnumy Nibh Euismod?</h3>
+											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam volutpat. Ut wisi enim ad minim veniam.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						
+						</div>
+					</div>
+				</div>
+
+				<div class="about-btn text-center">
+					<div class="genius-btn gradient-bg text-center text-uppercase ul-li-block bold-font">
+						<a href="#">Make Question <i class="fas fa-caret-right"></i></a>
+					</div>
+					<div class="genius-btn gradient-bg text-center text-uppercase ul-li-block bold-font">
+						<a href="#">contact us <i class="fas fa-caret-right"></i></a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		============================================= -->
+
+
+	<!-- Start of contact area form
+		============================================= 
+		<section id="contact-form" class="contact-form-area_3">
+			<div class="container">
+				<div class="section-title mb45 headline text-center">
+					<span class="subtitle text-uppercase">Send us a query</span>
+					<h2>Send Us A<span> Query</span></h2>
+				</div>
+				
+				<div class="contact_third_form">
+					<form class="contact_form" action="#" method="POST" enctype="multipart/form-data">
+						<div class="row">
+							<div class="col-md-4">
+								<div class="contact-info">
+									<input class="name" name="name" type="text" placeholder="Your Name.">
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="contact-info">
+									<input class="email" name="email" type="email" placeholder="Your Email">
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="contact-info">
+									<input class="number" name="number" type="number" placeholder="Phone Number">
+								</div>
+							</div>
+						</div>
+						<textarea  placeholder="Message."></textarea>
+						<div class="nws-button text-center  gradient-bg text-uppercase">
+							<button type="submit" value="Submit">SEND EMAIL <i class="fas fa-caret-right"></i></button> 
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+	
+		============================================= -->
+
+
+
+	<!-- Start of contact area
+		============================================= -->
+		<section id="contact-area" class="contact-area-section backgroud-style">
+			<div class="container">
+				<div class="contact-area-content">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="contact-left-content">
+								<div class="section-title  mb45 headline text-left">
+									<span class="subtitle ml42  text-uppercase">CONTACT US</span>
+									<h2><span>Get in Touch</span></h2>
+									<p>
+										For more information please contact at
+									</p>
+								</div>
+
+								<div class="contact-address">
+									<div class="contact-address-details">
+										<div class="address-icon relative-position text-center float-left">
+											<i class="fas fa-map-marker-alt"></i>
+										</div>
+										<div class="address-details ul-li-block">
+											<ul>
+												<li>Neurocomputation Lab, NCAI
+													CIS Department
+													NED University of Engineering & Technology
+													University Road, 75270, Karachi.</li>
+												
+											</ul>
+										</div>
+									</div>
+
+									<div class="contact-address-details">
+										<div class="address-icon relative-position text-center float-left">
+											<i class="fas fa-phone"></i>
+										</div>
+										<div class="address-details ul-li-block">
+											<ul>
+												<li><span>Primary: </span>(021) 99261261-2407</li>
+												<li><span>Second: </span>+92 310 8080828</li>
+											</ul>
+										</div>
+									</div>
+
+									<div class="contact-address-details">
+										<div class="address-icon relative-position text-center float-left">
+											<i class="fas fa-envelope"></i>
+										</div>
+										<div class="address-details ul-li-block">
+											<ul>
+												<li><span>Primary: </span>nclab@neduet.edu.pk</li>
+												<li><span>Second: </span>abulhasan@neduet.edu.pk</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="genius-btn mt60 gradient-bg text-center text-uppercase ul-li-block bold-font">
+								<a href="mailto:nclab@neduet.edu.pk">Contact Us <i class="fas fa-caret-right"></i></a>
+							</div>
+						</div>
+
+						<div class="col-md-6">
+							<div class="mapouter"><div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=ned%20university%20karachi%20pakistan&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.embedgooglemap.net/blog/divi-discount-code-elegant-themes-coupon/">divi discount</a><br><style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}</style><a href="https://www.embedgooglemap.net">google maps embed html</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style></div></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	<!-- End of contact area
+		============================================= -->
+
+
+
+	<!-- Start of footer section
+		============================================= -->
+		<footer>
+			<section id="footer-area" class="footer-area-section">
+				<div class="container">
+
+					<div class="copy-right-menu">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="copy-right-text">
+									<p>© 2021 - Neurocomputation Lab. All rights reserved</p>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="copy-right-menu-item float-right ul-li">
+									<div class="footer-social ul-li">
+										<ul>
+											<li><a href="https://www.facebook.com/nc.ncai"><i class="fab fa-facebook-f"></i></a></li>
+											<li><a href="https://www.linkedin.com/company/ned-nclab"><i class="fab fa-linkedin"></i></a></li>
+											<li><a href="https://www.youtube.com/channel/UCOyh_A31fD4-hc9xijwS7oA"><i class="fab fa-youtube"></i></a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</footer>
+		
+    
+	<!-- End of footer section
+		============================================= -->
+
+
+		<!-- For Js Library -->
+		<script src="{% static 'index-assets/js/jquery-2.1.4.min.js' %}"></script>
+		
+		<script src="{% static 'index-assets/js/popper.min.js' %}"></script>
+		<script src="{% static 'index-assets/js/owl.carousel.min.js' %}"></script>
+		<script src="{% static 'index-assets/js/jarallax.js' %}"></script>
+		<script src="{% static 'index-assets/js/jquery.magnific-popup.min.js' %}"></script>
+		<script src="{% static 'index-assets/js/lightbox.js' %}"></script>
+		<script src="{% static 'index-assets/js/jquery.meanmenu.js' %}"></script>
+		<script src="{% static 'index-assets/js/scrollreveal.min.js' %}"></script>
+		<script src="{% static 'index-assets/js/jquery.counterup.min.js' %}"></script>
+		<script src="{% static 'index-assets/js/waypoints.min.js' %}"></script>
+		<script src="{% static 'index-assets/js/jquery-ui.js' %}"></script>
+		<script src="{% static 'index-assets/js/gmap3.min.js' %}"></script>
+		<script src="{% static 'index-assets/js/switch.js' %}"></script>
+		<script src="https://maps.google.com/maps/api/js?key=AIzaSyC61_QVqt9LAhwFdlQmsNwi5aUJy9B2SyA"></script>
+
+		<script src="{% static 'index-assets/js/script.js' %}"></script>
+		<script src="{% static 'index-assets/js/bootstrap.min.js' %}"></script>
+		
+		<script>
+		// $( document ).ready(function() {
+        // function getCookie(name) {
+        //     var cookieValue = null;
+        //     if (document.cookie && document.cookie !== '') {
+        //         var cookies = document.cookie.split(';');
+        //         for (var i = 0; i < cookies.length; i++) {
+        //             var cookie = cookies[i].trim();
+        //             // Does this cookie string begin with the name we want?
+        //             if (cookie.substring(0, name.length + 1) === (name + '=')) {
+        //                 cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+        //                 break;
+        //             }
+        //         }
+        //     }
+        //     return cookieValue;
+        // }
+        
+        // var csrftoken = getCookie('csrftoken');
+        // function csrfSafeMethod(method) {
+        //     // these HTTP methods do not require CSRF protection
+        //     return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+        // }
+
+        //    $( "#registerButton" ).click(function() {
+        //       $("#registerButton").prop('disabled', true);
+        //       $("#registerButton").html('Loading...');
+        //       var username = $("#id_username").val();
+        //       var email =  $("#id_email").val();
+        //       var password1 =  $("#id_password1").val();
+        //       var password2 =  $("#id_password2").val();
+        //       var gender = $("#gender").val();
+		// 	  var education = $("#education").val();
+		// 	  var dob = $("#dob").val();
+		// 	  var org = $("#org").val();
+		// 	  var dept = $("#dept").val();
+		// 	  var cityCountry = $("#city-country").val();
+              
+        //           $.ajax({
+        //                     type:'post',
+        //                     cache: false,
+        //                     url: 'http://167.99.249.149:8000/useraccounts/register/', 
+        //                     beforeSend: function (xhr, settings) {
+        //                         if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+        //                             xhr.setRequestHeader("X-CSRFToken", csrftoken);
+        //                         }
+        //                     },
+        //                     data: {username: username, email: email, password1: password1, password2:password2, gender:gender, education:education, dob:dob, org:org, dept:dept, cityCountry:cityCountry },
+        //                     success: function(data) {
+                           
+        //                       $("#registerButton").prop('disabled', false);
+        //                       $("#registerButton").html('REGISTER NOW');
+        //                       if(data=="{}"){
+                              
+        //                           $("#registerError").html("");
+        //                           alert("User created sucessfully!")
+        //                           window.location.replace("http://167.99.249.149:8000")
+        //                           $("#myModal1").modal('toggle');
+        //                       }
+        //                       else{
+		// 						  console.log(data);
+        //                       var resps = JSON.parse(data);
+                              
+        //                       var errorString = "<p style='color:red;'>";
+        //                       for (var prop in resps) {
+        //                           errorString += resps[prop];
+        //                           errorString += "<br>";
+                                  
+        //                         }
+                                
+        //                         errorString += "</p>";
+        //                         $("#registerError").html(errorString);
+                                
+        //                        }
+
+        //                     }
+        //               });
+                  
+             
+        //     });
+            
+            
+        //      $( "#loginButton" ).click(function() {
+        //       $("#loginButton").prop('disabled', true);
+        //       $("#loginButton").html('Loading...');
+        //       var username = $("#username").val();
+        //       var password =  $("#password").val();
+              
+              
+        //           $.ajax({
+        //                     type:'post',
+        //                     cache: false,
+        //                     url: 'http://167.99.249.149:8000/useraccounts/loginAPI/',
+        //                     beforeSend: function (xhr, settings) {
+        //                         if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+        //                             xhr.setRequestHeader("X-CSRFToken", csrftoken);
+        //                         }
+        //                     },
+        //                     data: {username: username, password: password },
+        //                     success: function(data) {
+        //                       //alert(data);
+        //                       $("#loginButton").prop('disabled', false);
+        //                       $("#loginButton").html('LOGIN');
+        //                       if(data=="{}"){
+                              
+        //                           $("#loginError").html("");
+        //                           //alert("Logged in sucessfully!")
+        //                           window.location.replace("http://167.99.249.149:8000/useraccounts/dashboard/")
+        //                       }
+        //                       else{
+        //                       var resps = JSON.parse(data);
+                              
+        //                       var errorString = "<p style='color:red;'>";
+        //                       for (var prop in resps) {
+        //                           errorString += resps[prop];
+        //                           errorString += "<br>";
+                                  
+        //                         }
+                                
+        //                         errorString += "</p>";
+        //                         $("#loginError").html(errorString);
+                                
+        //                        }
+
+        //                     }
+        //               });
+                  
+             
+        //     });
+           
+            
+        // });
+
+		</script>
+
+	</body>
+	</html>

@@ -1,0 +1,69 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?55414d7bab61eb2ecc88cb4574a9d4f8") format("truetype"),
+url("./flaticon.woff?55414d7bab61eb2ecc88cb4574a9d4f8") format("woff"),
+url("./flaticon.woff2?55414d7bab61eb2ecc88cb4574a9d4f8") format("woff2"),
+url("./flaticon.eot?55414d7bab61eb2ecc88cb4574a9d4f8#iefix") format("embedded-opentype"),
+url("./flaticon.svg?55414d7bab61eb2ecc88cb4574a9d4f8#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "candidates": "\f101",
+    "select": "\f102",
+    "hr": "\f103",
+    "consulting": "\f104",
+    "hr-manager": "\f105",
+    "information": "\f106",
+    "handshake": "\f107",
+    "management": "\f108",
+    "worldwide": "\f109",
+    "diagram": "\f10a",
+    "trend": "\f10b",
+);
+
+.flaticon-candidates:before {
+    content: map-get($flaticon-map, "candidates");
+}
+.flaticon-select:before {
+    content: map-get($flaticon-map, "select");
+}
+.flaticon-hr:before {
+    content: map-get($flaticon-map, "hr");
+}
+.flaticon-consulting:before {
+    content: map-get($flaticon-map, "consulting");
+}
+.flaticon-hr-manager:before {
+    content: map-get($flaticon-map, "hr-manager");
+}
+.flaticon-information:before {
+    content: map-get($flaticon-map, "information");
+}
+.flaticon-handshake:before {
+    content: map-get($flaticon-map, "handshake");
+}
+.flaticon-management:before {
+    content: map-get($flaticon-map, "management");
+}
+.flaticon-worldwide:before {
+    content: map-get($flaticon-map, "worldwide");
+}
+.flaticon-diagram:before {
+    content: map-get($flaticon-map, "diagram");
+}
+.flaticon-trend:before {
+    content: map-get($flaticon-map, "trend");
+}

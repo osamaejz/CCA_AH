@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Table Example</title>
+    <style>
+        body {
+            display: grid;
+            grid-template-columns: 0.5fr 3.5fr;
+            gap: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        .sidebar {
+            background-color: #f0f0f0;
+            padding: 20px;
+            height: 100vh;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar li {
+            margin-bottom: 10px;
+        }
+
+        .content {
+            background-color: #ffffff;
+            padding: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Styling for <ul> */
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        .notification-toast {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            opacity: 0;
+            animation-name: fadeOut;
+            animation-duration: 2.5s;
+            animation-delay: 0.5s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <div id="notification-toast" class="notification-toast toast" role="alert" aria-live="assertive" aria-atomic="true">
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+                {% endfor %}
+        </ul>
+        {% endif %}
+
+    </div>
+
+    <div class="sidebar">
+        <ul>
+            <li><a href="#employee">Employee Table</a></li>
+            <li><a href="#student">Student Table</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <div id="employee" class="table-container">
+            <h2>Employee Table</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Employee ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Download</th>
+                        <th>Send</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for employee in employees %}
+                    <tr>
+                        <td>{{ employee.employee_id }}</td>
+                        <td>{{ employee.name }}</td>
+                        <td>{{ employee.email }}</td>
+                        <td>
+                            <form action="" method="get">
+                                <input type="hidden" name="user_type" value="e">
+                                <input type="hidden" name="user_id" value="{{ employee.employee_id }}">
+                                <input type="hidden" name="name" value="{{ employee.name }}">
+                                <button type="submit" class="action-button">Download</button>
+                            </form>
+
+                        </td>
+                        <td>
+                            <form action="" method="get">
+                                <input type="hidden" name="user_type" value="e">
+                                <input type="hidden" name="email" value="{{employee.email}}">
+                                <input type="hidden" name="user_id" value="{{ employee.employee_id }}">
+                                <input type="hidden" name="name" value="{{ employee.name }}">
+                                <button type="submit" class="action-button">Mail PDF</button>
+                            </form>
+
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div id="student" class="table-container hidden">
+            <h2>Student Table</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student ID</th>
+                        <th>Name</th>
+                        <th>email</th>
+                        <th>Downlad</th>
+                        <th>Send</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for student in students %}
+                    <tr>
+                        <td>{{ student.student_id }}</td>
+                        <td>{{ student.name }}</td>
+                        <td>{{ student.email }}</td>
+                        <td>
+                            <form action="" method="get">
+                                <input type="hidden" name="user_type" value="s">
+                                <input type="hidden" name="user_id" value="{{ student.student_id }}">
+                                <input type="hidden" name="name" value="{{ student.name }}">
+                                <button type="submit" class="action-button">Download</button>
+                            </form>
+                        </td>
+                        <td>
+                            <form action="" method="get">
+                                <input type="hidden" name="user_type" value="s">
+                                <input type="hidden" name="email" value="{{student.email}}">
+                                <input type="hidden" name="user_id" value="{{ student.student_id }}">
+                                <input type="hidden" name="name" value="{{ student.name }}">
+                                <button type="submit" class="action-button">Mail PDF</button>
+                            </form>
+
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        const links = document.querySelectorAll('.sidebar a');
+        const tableContainers = document.querySelectorAll('.table-container');
+
+        links.forEach(link => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+                const targetId = link.getAttribute('href').substring(1);
+                tableContainers.forEach(container => {
+                    if (container.id === targetId) {
+                        container.classList.remove('hidden');
+                    } else {
+                        container.classList.add('hidden');
+                    }
+                });
+            });
+        });
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const toastEl = document.getElementById('notification-toast');
+            toastEl.classList.add('show');
+
+            setTimeout(function () {
+                toastEl.classList.remove('show');
+            }, 1000);
+        });
+
+
+
+    </script>
+
+</body>
+
+</html>

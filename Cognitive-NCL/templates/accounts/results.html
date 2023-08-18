@@ -1,0 +1,55 @@
+<!--<h1>Results</h1>
+<p>Depression: {{depression}}</p>
+<p>Anxiety: {{anxiety}}</p>
+<p>Life Satisfaction: {{lifeSatisfaction}}</p>
+<p>Work Stress: {{workStress}}</p>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Results</title>
+		{% load static %}
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{% static 'thanks-assets/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'thanks-assets/css/fontawesome-all.css' %}">
+	<link rel="stylesheet" href="{% static 'thanks-assets/css/style.css' %}">
+</head>
+<body>
+	<!-- Start of thank you section
+		============================================= -->
+		<section id="thank-you" class="thank-you-section">
+			<div class="container">
+				<div class="thank-you-wrapper position-relative thank-wrapper-style-two">
+					<!-- <div class="thank-you-close text-center">x</div> -->
+					<div class="thank-txt text-center">
+						<div class="text-area-thank">
+							<div class="thank-icon">
+								<img style="border-radius:50%;" src="{% static 'thanks-assets/img/tht2.png' %}" alt="">
+							</div>
+							<h1>Success!</h1>
+							<p>You have successfully completed your assessment.</p>
+						</div>
+					</div>
+					<div class="thank-txt-part2">
+						
+						<p class="text-center" style="color: black; font-size:24px;">Your assessment findings will be shared in your email within 3 working days.</p>
+						<br>
+						
+						<a style="color:white; text-decoration: none;" href="{% url 'useraccounts:logout' %}" role="button"><div style="background:red;" class="okey-btn text-uppercase text-center">
+							Close
+						</div></a>
+						
+					</div>
+				</div>
+			</div>
+		</section>
+ 	<!-- End of thank you section
+ 		============================================= -->
+
+ 		<script src="{% static 'thanks-assets/js/jquery-3.3.1.min.js' %}"></script>
+ 		<script src="{% static 'thanks-assets/js/bootstrap.min.js' %}"></script>
+ 		<script src="{% static 'thanks-assets/js/main.js' %}"></script>
+ 	</body>
+ 	</html>

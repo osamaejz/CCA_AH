@@ -1,0 +1,10 @@
+adminaccounts/__pycache__/
+adminaccounts/migrations/__pycache__/
+useraccounts/__pycache__/
+useraccounts/migrations/__pycache__/
+brainyHR/__pycache__/
+brainyHR/migrations/__pycache__/
+
+env/
+env
+/report/
